@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+@import "tailwindcss";
+
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+  --font-Josefin: "Josefin Sans", sans-serif;
+  --font-Corinthia: "Corinthia", cursive;
+  --font-Anton: "Anton", sans-serif;
+  --font-courgette-regular: "Courgette", cursive;
+}
+
+
+body{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+.dark {
+  color-scheme: dark;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* star */
+.star-shape {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Octagon */
+.octagon-shape {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/* Octogon frame */
+.octagon-border {
+border: 2px;
+fill: transparent;
+clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+
+/* Corner only */
+.corner-only {
+  --s: 50px; /* size of the corners */
+  border: 8px solid #3b82f6; 
+  padding: 20px;
+  padding-left: 100px;
+  align-items: center;
+  mask: 
+    conic-gradient(#000 0 0) content-box,
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 
+    0 0/calc(100% - var(--s)) calc(100% - var(--s));
+}
+
+
