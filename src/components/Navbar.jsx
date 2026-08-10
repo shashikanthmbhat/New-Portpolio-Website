@@ -114,8 +114,8 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                             : 'Switch to dark mode'
                         }>
                             {darkMode 
-                            ? (<Sun className="w-5 h-5 text-blue-300" />)
-                            : (<Moon className="w-5 h-5 text-cyan-700" />)}
+                            ? (<Sun className="w-5 h-5 text-blue-500 fill-blue-400/20" />)
+                            : (<Moon className="w-5 h-5 text-cyan-700 fill-cyan-700/10" />)}
                         </motion.button>
                         {/*Button*/}
 

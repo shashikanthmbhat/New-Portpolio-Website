@@ -54,7 +54,7 @@ const Hero = ({ darkMode }) => {
                     data-aos='fade-up'
                     data-aos-delay = '500'>
                         I Am  &nbsp;
-                        <span className='font-courgette-regular text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 font-bold'>
+                        <span className='font-courgette-regular text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-linear-to-r from-red-500 via-blue-500 to-purple-500 font-bold'>
                               Shashikanth Bhat
                         </span>
                     </h1>

@@ -46,7 +46,6 @@ const App = () => {
       <About darkMode={darkMode}/>
       <Skills darkMode={darkMode}/>
       <Project darkMode={darkMode}/>
-      <Ggg darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
       <Footer darkMode={darkMode}/>
     </div>

@@ -8,20 +8,37 @@ import {
     FaTimes
 } from 'react-icons/fa'
 
-import Pproject1 from '../assets/Project_Imgs/Project_1.png'
-import Pproject2 from '../assets/Project_Imgs/Project_2.png'
-import Pproject3 from '../assets/Project_Imgs/Project_3.png'
-import Pproject4 from '../assets/Project_Imgs/Project_4.png'
-import Pproject5 from '../assets/Project_Imgs/Project_5.png'
-import Pproject6 from '../assets/Project_Imgs/Project_6.png'
+import Pproject11 from '../assets/Project_Imgs/Project_1/01_Home.png'
+import Pproject12 from '../assets/Project_Imgs/Project_1/02_MRD.png'
+import Pproject13 from '../assets/Project_Imgs/Project_1/03_Admn_Desk.png'
+import Pproject14 from '../assets/Project_Imgs/Project_1/04_ED.png'
+import Pproject15 from '../assets/Project_Imgs/Project_1/05_Endoscopy.png'
+import Pproject16 from '../assets/Project_Imgs/Project_1/06_HR.png'
 
-import Pproject7 from '../assets/Project_Imgs/Project_7.png'
-import Pproject8 from '../assets/Project_Imgs/Project_8.png'
-import Pproject9 from '../assets/Project_Imgs/Project_9.png'
-import Pproject10 from '../assets/Project_Imgs/Project_10.png'
-import Pproject11 from '../assets/Project_Imgs/Project_11.png'
-import Pproject12 from '../assets/Project_Imgs/Project_12.png'
+import Pproject21 from '../assets/Project_Imgs/Project_2/01_Exicutive.png'
+import Pproject22 from '../assets/Project_Imgs/Project_2/02_Supplier.png'
+import Pproject23 from '../assets/Project_Imgs/Project_2/03_Production.png'
+import Pproject24 from '../assets/Project_Imgs/Project_2/04_Inventory.png'
+import Pproject25 from '../assets/Project_Imgs/Project_2/05_Shipment.png'
+import Pproject26 from '../assets/Project_Imgs/Project_2/06_Sales.png'
 
+import Pproject31 from '../assets/Project_Imgs/Project_3/01_Blue.png'
+import Pproject32 from '../assets/Project_Imgs/Project_3/02_Green.png'
+
+import Pproject41 from '../assets/Project_Imgs/Project_4/01_Home.png'
+import Pproject42 from '../assets/Project_Imgs/Project_4/02_Allance.png'
+import Pproject43 from '../assets/Project_Imgs/Project_4/03_State.png'
+import Pproject44 from '../assets/Project_Imgs/Project_4/04_Party.png'
+
+import Pproject51 from '../assets/Project_Imgs/Project_5/5_1.png'
+import Pproject52 from '../assets/Project_Imgs/Project_5/5_2.png'
+import Pproject53 from '../assets/Project_Imgs/Project_5/5_3.png'
+import Pproject54 from '../assets/Project_Imgs/Project_5/5_4.png'
+
+import Pproject61 from '../assets/Project_Imgs/Project_6/6_1.png'
+import Pproject62 from '../assets/Project_Imgs/Project_6/6_2.png'
+import Pproject63 from '../assets/Project_Imgs/Project_6/6_3.png'
+import Pproject64 from '../assets/Project_Imgs/Project_6/6_4.png'
 
 // ============================================================
 // Project Slideshow Component
@@ -371,45 +388,51 @@ const Ggg = ({ darkMode }) => {
     const projects = [
         {
             id: 1,
-            title: 'Sales v/s Budget Dashboard',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject1, Pproject7],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            title: 'Hospital Dashboard',
+            desc: 'A comprehensive, production-ready Power BI solution for modern healthcare analytics & clinical insights.',
+            images: [Pproject11, Pproject12, Pproject13, Pproject14, Pproject15, Pproject16],
+            tags: ['PowerBI', 'DAX', 'Copilot', 'ai', 'hospital', 'cloudstorage', 'dashboard', 'data-analysys', 'vba'],
+            githubLink : 'https://github.com/shashikanthmbhat/Hospial-Dashboard'
         },
         {
             id: 2,
-            title: 'Sports Dashboard',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject2, Pproject8],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            title: 'Supply Chain Dashboard',
+            desc: 'Comprehensive analysis of critical key performance indicators (KPIs) to drive strategic operational oversight',
+            images: [Pproject21, Pproject22, Pproject23, Pproject24, Pproject25, Pproject26],
+            tags: ['PowerBI', 'DAX', 'Copilot','supply-chain', 'business-intelligence', 'dashboard', 'data-analysys', 'vba'],
+            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         },
         {
             id: 3,
-            title: 'Marketing Campaign Dashboard',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject3, Pproject9],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            title: 'Appointment Visual Dashboard',
+            desc: 'Interactive, calendar-style meeting view inside Power BI using new Card visual',
+            images: [Pproject31, Pproject32],
+            tags: ['PowerBI', 'DAX', 'Copilot', 'csv', 'dax-expression', 'dax-querry'],
+            githubLink : 'https://github.com/shashikanthmbhat/Appointment_Visual'
         },
         {
             id: 4,
-            title: 'HR analytics Dashboard',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject4, Pproject10],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            title: 'Election Result Analysis Dashboard',
+            desc: 'Dashboard on deep dive analysis on results of Indian General Election 2024',
+            images: [Pproject41, Pproject42, Pproject43, Pproject44],
+            tags: ['PowerBI', 'DAX', 'Copilot', 'dataanalysis', 'dataengineering', 'cloudstorage', 'datavisualization'],
+            githubLink : 'https://github.com/shashikanthmbhat/Election_Result_Analysis'
         },
         {
             id: 5,
             title: 'Banking Analytics Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject5, Pproject11],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            images: [Pproject51, Pproject52, Pproject53, Pproject54],
+            tags: ['PowerBI', 'DAX', 'Copilot'],
+            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         },
         {
             id: 6,
             title: 'Sales Overview Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
-            images: [Pproject6, Pproject12],
-            tags: ['PowerBI', 'DAX', 'Copilot']
+            images: [Pproject61, Pproject62, Pproject63, Pproject64],
+            tags: ['PowerBI', 'DAX', 'Copilot'],
+            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         }
     ]
 
@@ -556,30 +579,11 @@ const Ggg = ({ darkMode }) => {
                                     {/* Call to Action Links */}
                                     <div className='flex gap-2'>
 
-                                        {/* GitHub */}
+                                        {/* Github */}
                                         <a
-                                            href='#'
-                                            style={{
-                                                backgroundColor:
-                                                    darkMode
-                                                        ? '#374151'
-                                                        : '#f3f4f6',
-                                                color: darkMode
-                                                    ? 'white'
-                                                    : '#374151'
-                                            }}
-                                            className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-sm rounded-lg hover:opacity-90 transition-colors'
-                                            data-aos='zoom-in'
-                                            data-aos-delay='300'
-                                        >
-                                            <FaGithub className='text-sm' />
-                                            Code
-                                        </a>
-
-
-                                        {/* Live Demo */}
-                                        <a
-                                            href='#'
+                                            href={project.githubLink}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
                                             style={{
                                                 background:
                                                     'linear-gradient(to right, #3b82f6, #06b6d4)'
@@ -588,8 +592,8 @@ const Ggg = ({ darkMode }) => {
                                             data-aos='zoom-in'
                                             data-aos-delay='400'
                                         >
-                                            <FaExternalLinkAlt className='text-sm' />
-                                            Demo
+                                            <FaGithub className='text-sm' />
+                                            Github Link
                                         </a>
 
                                     </div>
