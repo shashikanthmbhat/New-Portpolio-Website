@@ -1,6 +1,8 @@
 //This is 'About Me section
 import hero2 from '../assets/hero2.png' //Not Used kept for alternative
 import Me4 from '../assets/Me/Me4.png'
+import Me from '../assets/Me/Me.png'
+import educ from '../assets/Me/educ.png'
 
 
 const About = ({ darkMode }) => {
@@ -13,29 +15,33 @@ const About = ({ darkMode }) => {
 
   return (
    <section id="about" className={`min-h-screen overflow-hidden flex items-start justify-center z-10 px-4 sm:px-6 pt-23`}>
-    <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-        <figure
-            data-aos='fade-up'
-            data-aos-delay='300'
-            className="flex flex-wrap justify-center gap-4 relative order-2 lg:order-1">
-            <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-                <div className="relative z-10 bg-linear-to-r from-blue-600 to-cyan-600 shadow-2xl rounded-[50%_40%_30%_60%/60%_30%_70%_30%] p-4 backdrop-blur-sm border border-blue-500/30 -translate-y-6"
-                data-aos='zoom-in'
-                data-aos-delay='600'>
-                    <div className='rounded-xl overflow-hidden'></div> 
-                <img
-                src={Me4}
-                alt="About Image"
-                className="w-125 h-125 object-contain -translate-y-8"
-                data-aos='zoom-in'
-                data-aos-delay='400'/>
-                </div>   
+    {/* 1. Changed items-center to items-stretch to enforce identical column heights on desktop */}
+    <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
+        
+        {/** Left Half - About me Img (Now fills height) */}
+        <div className='w-full flex justify-center lg:justify-start h-full' data-aos='fade-right'>
+            {/* 2. Added h-full to the absolute/relative positioning layout */}
+            <div className='relative w-full max-w-sm lg:max-w-md h-full min-h-87.5 lg:min-h-0'>
+                {/**Shadow Outline */}
+                <div className='absolute h-full w-full z-0 p-2 translate-x-4 translate-y-4 rounded-2xl shadow-lg border-3 border-blue-500'>
+                </div>
+                {/**Image Wrapper */}
+                <div className='relative z-10 bg-[#111a3e] rounded-2xl overflow-hidden border border-[#1f1641] h-full'>
+                    {/* 3. Changed fixed height classes to h-full so it fills the container while maintaining aspect ratio */}
+                    <img 
+                        src={Me} 
+                        alt='About Me' 
+                        className='w-full h-full object-cover transform transition-transform duration-500 hover:scale-110'
+                    />
+                </div>
             </div>
-        </figure>
+        </div>
+
+        {/**Right Half */}
         <article
         data-aos='fade-left'
         data-aos-delay='300'
-        className='text-center lg:text-left relative order-1 lg:order-2'>
+        className='text-center lg:text-left relative flex flex-col justify-between'>
             <header>
                 <h1 className='text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text'
                 style={{ color: darkMode ? 'white' : '#1f2937' }}
@@ -52,7 +58,7 @@ const About = ({ darkMode }) => {
                 </h1>
             </header>
 
-            {/* Discription */}
+            {/* Description */}
             <p className={`text-sm sm:text-base lg:text-lg text-justify mb-6 sm:mb-8 leading-relaxed bg-linear-to-r from-blue-900/10 to-blue-900/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
             ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
             data-aos='fade-up'
@@ -79,7 +85,7 @@ const About = ({ darkMode }) => {
                     </div>
                 </div>
 
-                {/* Expirience */}
+                {/* Experience */}
                 <div className='text-center'
                 data-aos='zoom-in'
                 data-aos-delay='650'>
@@ -87,7 +93,7 @@ const About = ({ darkMode }) => {
                         10+
                     </div>
                     <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'text-gray-300' : 'text-gray-600'} `}>
-                        Years of Expirience
+                        Years of Experience
                     </div>
                 </div>
 
@@ -99,21 +105,24 @@ const About = ({ darkMode }) => {
                         100+
                     </div>
                     <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'text-gray-300' : 'text-gray-600'} `}>
-                        Projects complited
+                        Projects completed
                     </div>
                 </div>
             </div>
-            <button className={`w-full sm:w-auto border-2 border-blue-500 inline-flex items-center justify-center py-2 px-4 sm:px-6 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform
-                ${darkMode
-                    ? 'text-white bg-blue-500/10'
-                    : 'text-gray-800 bg-white/90'}`}
-                    data-aos='fade-up'
-                    data-aos-delay='800'>
-                Learn More
-            </button>
+            <div>
+                <button className={`w-full sm:w-auto border-2 border-blue-500 inline-flex items-center justify-center py-2 px-4 sm:px-6 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform
+                    ${darkMode
+                        ? 'text-white bg-blue-500/10'
+                        : 'text-gray-800 bg-white/90'}`}
+                        data-aos='fade-up'
+                        data-aos-delay='800'>
+                    Learn More
+                </button>
+            </div>
         </article> 
     </div>
 </section>
+
   )
 }
 

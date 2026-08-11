@@ -1,21 +1,39 @@
 //Home section
+// import github from '../assets/github.png'
+// import powerBI from '../assets/powerBI.png'
+// import linkedIn from '../assets/linkedIn.png'
+// import youtube from '../assets/youtube.png'
 
-import github from '../assets/github.png'
-import powerBI from '../assets/powerBI.png'
-import linkedIn from '../assets/linkedIn.png'
-import youtube from '../assets/youtube.png'
 import hero1 from '../assets/hero1.png'
+import about from '../assets/Me/about.png'
+import hr from '../assets/Me/hero1.png'
 import cv from '../assets/cv.pdf'
 import { DownloadIcon, Mail } from 'lucide-react'
 import { FaInstagram, FaLinkedinIn, FaYoutube, FaGithub } from 'react-icons/fa'
 import { ChartBarIcon } from '@heroicons/react/24/solid'
 
+
 const Hero = ({ darkMode }) => {
     const socialIcons = [
-        { icon: github, alt: 'Github'},
-        { icon: powerBI, alt: 'PowerBI'},
-        { icon: linkedIn, alt: 'LinkedIn'},
-        { icon: youtube, alt: 'Youtube'},
+        { icon: FaGithub, 
+          alt: 'Github', 
+          href: "https://github.com/shashikanthmbhat"},
+
+        { icon: ChartBarIcon, 
+          alt: 'PowerBI', 
+          href: "https://app.powerbi.com/home?experience=power-bi"},
+
+        { icon: FaLinkedinIn, 
+          alt: 'LinkedIn', 
+          href: "https://linkedin.com/in/Shashikanth_Bhat"},
+
+        { icon: FaYoutube, 
+          alt: 'Youtube', 
+          href: "https://www.youtube.com/@shashikanthbhat1684"},
+
+        { icon: FaInstagram, 
+          alt: 'Instagram', 
+          href: "https://www.instagram.com/the_dead_weight_dumber?igsh=aWwzdGJjeGk4Ym13"},
     ];
 
     const darkTheme = {
@@ -54,7 +72,7 @@ const Hero = ({ darkMode }) => {
                     data-aos='fade-up'
                     data-aos-delay = '500'>
                         I Am  &nbsp;
-                        <span className='font-courgette-regular text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-linear-to-r from-red-500 via-blue-500 to-purple-500 font-bold'>
+                        <span className='font-courgette-regular text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-linear-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 font-bold'>
                               Shashikanth Bhat
                         </span>
                     </h1>
@@ -76,38 +94,24 @@ const Hero = ({ darkMode }) => {
                     data-aos-delay = '500'>
                         See my works at :
                     </h3>
-                    {/* Social Icons */}
-                    <div className="flex gap-4">
-                        {/* Github */}
-                        <a href="#"
-                        className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all">
-                            <FaGithub className="w-7 h-7"/>
-                        </a>
 
-                        {/* PoweBI */}
-                        <a href="#"
-                        className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all">
-                            <ChartBarIcon className="w-7 h-7"/>
-                        </a>
+                    {/* Social Icons Container */}
+                    <div className="flex gap-4" data-aos="fade-up" data-aos-delay="500">
+                        {socialIcons.map(({ id, href, icon: Icon, label }) => (
+                            <a
+                                key={id}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all"
+                            >
+                                <Icon className="w-7 h-7" />
+                            </a>
+                        ))}
+                    </div>
 
-                        {/* LinkedIn */}
-                        <a href="#"
-                        className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all">
-                            <FaLinkedinIn className="w-7 h-7"/>
-                        </a>
-
-                        {/* Youtube */}
-                        <a href="#"
-                        className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all">
-                            <FaYoutube className="w-7 h-7"/>
-                        </a>
-
-                        {/* Instagram */}
-                        <a href="#"
-                        className="p-3 rounded-xl text-blue-500 border-2 border-blue-500 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] transition-all">
-                            <FaInstagram className="w-7 h-7"/>
-                        </a>
-                    </div> 
+ 
 
                     {/*BUTTON */}
                     <div className='w-full pt-4 sm:pt-6'>
@@ -129,28 +133,26 @@ const Hero = ({ darkMode }) => {
                         </div>
                     </div>
                 </div>
+
                 {/* IMAGE */}
-                <div className='lg:w-1/2 w-full max-w-md lg:max-w-lg mt-8 lg:mt-0 flex justify-center '
-                data-aos='fade-left'
-                data-aos-delay='400'>
-                    <div className='relative w-4/5 sm:w-3/4 lg:w-full'>
-                        <div className='relative overflow-hidden'>
-                            <img
-                            src={hero1}
-                            alt="Me2 Image"
-                            className='w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500' />
-                            
-                            {/* <div> Hi Image </div> */}
+                <div className='mt-16 md:mt-0 flex justify-center lg:justify-center relative'
+                data-aos = 'fade-left'>
+                    <div className='relative w-70 h-70 md:w-96 md:h-120'>
+                        {/** Background */}
+                        <div className='absolute inset-0 z-0 rounded-full shadow-lg border-3 border-blue-500 translate-x-4 translate-y-4'>
                         </div>
+                        {/** Image */}
+                        <div className='relative z-0 w-full h-full bg-[#111a3e] rounded-full overflow-hidden border border-[#1f1641]'>
+                            <img src={hr} alt="About" />
+                        </div>
+
                     </div>
+
                 </div>
-                
+                 
             </div>
-
         </section>
-
     </div>
   )
 }
-
 export default Hero
