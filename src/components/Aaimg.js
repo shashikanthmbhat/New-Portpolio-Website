@@ -1,4 +1,4 @@
-// heroData.js
+// For Hero.jsx
 import hero1 from '../assets/hero1.png';
 import about from '../assets/Me/about.png';
 import hr from '../assets/Me/hero1.png';
@@ -7,8 +7,19 @@ import cv from '../assets/cv.pdf';
 import { DownloadIcon, Mail } from 'lucide-react';
 import { FaInstagram, FaLinkedinIn, FaYoutube, FaGithub } from 'react-icons/fa';
 import { ChartBarIcon } from '@heroicons/react/24/solid';
+import { useState} from 'react'
+//====================================================================================
 
+//For About.jsx
+
+//For Hero.jsx
 export const assets = { hero1, about, hr, cv, DownloadIcon, Mail };
+
+// export const [text, setText] = useState('');
+// export const [isDeleting, setIsDeleting] = useState(0);
+// export const [loopNo, setLoopNo] = useState(0);
+// export const [typeSpeed, setTypeSpeed] = useState(150);
+// export const title = ['Shashikanth Bhat', 'PowerBI Analyst', 'Statistician'];
 
 export const socialIcons = [
     { 
@@ -52,3 +63,4 @@ export const themes = {
         decorativeCircle: 'bg-orange-400 opacity-20'
     }
 };
+//===============================================================================================

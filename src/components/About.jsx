@@ -3,6 +3,7 @@ import hero2 from '../assets/hero2.png' //Not Used kept for alternative
 import Me4 from '../assets/Me/Me4.png'
 import Me from '../assets/Me/Me.png'
 import educ from '../assets/Me/educ.png'
+import { motion, AnimatePresence } from 'framer-motion'
 
 
 const About = ({ darkMode }) => {
@@ -19,19 +20,20 @@ const About = ({ darkMode }) => {
     <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
         
         {/** Left Half - About me Img (Now fills height) */}
-        <div className='w-full flex justify-center lg:justify-start h-full' data-aos='fade-right'>
+        <div className='w-full flex justify-center lg:justify-start h-[97%]' data-aos='fade-right'>
             {/* 2. Added h-full to the absolute/relative positioning layout */}
             <div className='relative w-full max-w-sm lg:max-w-md h-full min-h-87.5 lg:min-h-0'>
                 {/**Shadow Outline */}
-                <div className='absolute h-full w-full z-0 p-2 translate-x-4 translate-y-4 rounded-2xl shadow-lg border-3 border-blue-500'>
-                </div>
+                <motion.div className='absolute h-full w-full z-0 p-2 rounded-2xl shadow-lg border-3 border-blue-500'
+                style={{ boxShadow: '0 0 20px rgb(34 211 238)' }}>
+                </motion.div>
                 {/**Image Wrapper */}
-                <div className='relative z-10 bg-[#111a3e] rounded-2xl overflow-hidden border border-[#1f1641] h-full'>
+                <div className='relative z-10 rounded-2xl overflow-hidden border h-full'>
                     {/* 3. Changed fixed height classes to h-full so it fills the container while maintaining aspect ratio */}
                     <img 
-                        src={Me} 
+                        src={Me4} 
                         alt='About Me' 
-                        className='w-full h-full object-cover transform transition-transform duration-500 hover:scale-110'
+                        className='w-[97%] h-[97%] object-cover transform transition-transform duration-500 hover:scale-110'
                     />
                 </div>
             </div>
@@ -65,13 +67,12 @@ const About = ({ darkMode }) => {
             data-aos-delay='500'>
                     PowerBI Analyst | Experienced Statistician | Data-Driven Decision Maker | Research & Analytics Expert
                     <br/>
-                    <br/>
                     <span className='text-justify'>
                         Power BI Analyst with 3+ years of experience and a Statistician with 10+ years of expertise, transforming complex data into actionable insights across healthcare, finance, and research. Skilled in building interactive dashboards, data modeling, and advanced analytics, with strong proficiency in Power BI, SQL, R, Python, and SAS to drive data-driven decisions and measurable business impact.
                     </span>
             </p>
             
-            <div className='flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-6 lg:gap-8 mb-6 sm:mb-8'>
+            <div className='flex flex-wrap justify-center lg:justify-start gap-10 sm:gap-6 lg:gap-8 mb-6 sm:mb-8'>
                 
                 {/* Education */}
                 <div className='text-center'
@@ -109,6 +110,8 @@ const About = ({ darkMode }) => {
                     </div>
                 </div>
             </div>
+
+            {/* I think button is not reqired */}
             <div>
                 <button className={`w-full sm:w-auto border-2 border-blue-500 inline-flex items-center justify-center py-2 px-4 sm:px-6 hover:shadow-[0_0_40px_rgb(59,130,246,0.7)] rounded-full text-base sm:text-lg font-semibold transition-all duration-300 transform
                     ${darkMode
