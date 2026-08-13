@@ -42,12 +42,13 @@ const App = () => {
     }>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       {/* <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
-      <Hero darkMode={darkMode}/>
-      <About darkMode={darkMode}/>
+      {/* <Hero darkMode={darkMode}/>
+      <About darkMode={darkMode}/> */}
       <Skills darkMode={darkMode}/>
-      <Project darkMode={darkMode}/>
+      <Ggg darkMode={darkMode}/>
+      {/* <Project darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
-      <Footer darkMode={darkMode}/>
+      <Footer darkMode={darkMode}/> */}
     </div>
   )
 }
