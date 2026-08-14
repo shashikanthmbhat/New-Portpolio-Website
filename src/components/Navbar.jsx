@@ -44,7 +44,7 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
 
  return (
     <header>
-        <div className="flex justify-center w-full fixed top-0 left-0 z-40 mt-4">
+        <div className="flex justify-center w-full fixed top-0 z-40 mt-4">
             <motion.nav
             initial={{ y: -100}}
             animate={{ y: 0}}
@@ -115,7 +115,8 @@ const Navbar = ({darkMode, toggleDarkMode}) => {
                         }>
                             {darkMode 
                                 ? (<Moon className="w-5 h-5 text-cyan-700 fill-cyan-700/10" />)
-                                : (<Sun className="w-5 h-5 text-blue-500 fill-blue-400/20" />)}
+                                : (<Sun className="w-5 h-5 text-blue-500 fill-blue-400/20" />)
+                                }
 
                         </motion.button>
                         {/*Button*/}

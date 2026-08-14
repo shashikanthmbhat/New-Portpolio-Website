@@ -10,6 +10,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     const navItems = [
         { name: 'Home', link: '#home' },
         { name: 'About', link: '#about' },
+        { name: 'Expirience', link: '#expirience' },
         { name: 'Skills', link: '#skills' },
         { name: 'Projects', link: '#projects' },
         { name: 'Contact', link: '#contact' }
@@ -35,7 +36,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 flex justify-center p-4">
+        <header className="fixed top-0 left-50 w-fit z-50 flex justify-center p-4">
             <motion.nav
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -93,7 +94,8 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                                 onClick={toggleDarkMode}
                                 className={`p-2 rounded-full ${darkMode ? 'bg-gray-800' : 'bg-gray-100'}`}
                             >
-                                {darkMode ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-slate-700" />}
+                                
+                                {darkMode ? <Sun className="w-5 h-5 text-blue-500" /> : <Moon className="w-5 h-5 text-blue-500" />}
                             </motion.button>
 
                             <motion.a

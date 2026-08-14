@@ -53,7 +53,7 @@ const Ggg = ( {darkMode}) => {
         {id: 1, name: 'My SQL', icon: Mmysql, level: "95%", color: '#00758f'},
         {id: 2, name: 'Mongo DB', icon: Mmongodb, level: "95%", color: '#10aa50'},
         {id: 3, name: 'Oracle DB', icon: Ooracle, level: "90%", color: '#c94634'},
-        {id: 4, name: 'Microsoft SQL Server', icon: Mmcsqlserver, level: "90%", color: '#b71c1c'},
+        {id: 4, name: 'Microsoft SQL', icon: Mmcsqlserver, level: "90%", color: '#b71c1c'},
     ];
 
     const stats = [
@@ -91,178 +91,300 @@ const Ggg = ( {darkMode}) => {
 
                     {/* Discription - My Skills */}
                     <p className='text-lg max-w-2xl mx-auto leading-relaxed'
-                    style={{ color: darkMode ? '#d1d5db' : '#4b5563'}}>
-                        A specialized toolkit of modern frameworks, languages, and cloud technologies leveraged to build scalable, high-performance web applications
+                        style={{ color: darkMode ? '#d1d5db' : '#4b5563'}}>
+                          A specialized toolkit of modern frameworks, languages, and cloud technologies leveraged to build scalable, high-performance web applications
                     </p>
                 </div>
                 <div className='container mx-auto flex px-4 sm:px-8 lg:px-14 py-12 lg:py-14 flex-col lg:flex-row items-center justify-between lg:mt-14 mt-14'>
-                {/* ===========================================================================
-                                          Business Inteligence (BI)
-                =========================================================================== */}
-                {/* Heading*/}
-                <div>
-                <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
-                    <h1 className='font-bold title-font mb-4'
-                    style={{color: darkMode ? 'white' : '#1f3927'}}>
-                        Business Inteligence Tools :
-                    </h1>
-                </div>
                 
-                {/* Skill BI */}
-                <div className='space-y-8'>
-                  {skillsBI.map((sklbi) => {
-                    const sklbiicon = sklbi.icon;
-                    return (
-                      <div key= {sklbi.id} className='group'>
-                        <div className='flex items-center justify-between mb-2'>
-                          <div className='flex items-center gap-3'>
-                            <div className='p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300'>
-                              <img src={sklbi.icon}
-                                    alt={sklbi.name}
-                                    className='w-10 h-10 object-contain '/>
-                            </div>
-                            <span className='text-2xl font-bold tracking-wide'
-                            style={{color: darkMode ? 'white' : '#1f2937'}}>
-                              {sklbi.name}
+               
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 items-start">
+
+                  {/* ========================* Business Intelligence (BI) *================================= */}
+                  <div className="flex flex-col">
+                    <div
+                      className="sm:text-xl text-xl text-left mt-4 mb-4"
+                      data-aos="fade-up"
+                    >
+                      <h1
+                        className="font-bold text-xl font-Archivo-Narrow title-font mb-4"
+                        style={{ color: darkMode ? 'white' : '#1f3927' }}
+                      >
+                        Business Intelligence Tools:
+                      </h1>
+                    </div>
+
+                    <div className="space-y-8">
+                      {skillsBI.slice(0, 5).map((sklbi) => (
+                        <div key={sklbi.id} className="group h-22.5">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className="p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300">
+                                <img
+                                  src={sklbi.icon}
+                                  alt={sklbi.name}
+                                  className="w-10 h-10 object-contain"
+                                />
+                              </div>
+
+                              <span
+                                className="font-bold tracking-wide"
+                                style={{color: darkMode ? 'white' : '#1f2937'}}>
+                                {sklbi.name}
                               </span>
-                          </div>
-                          <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
-                                            WebkitBackgroundClip:'text',
-                                            backgroundClip: 'text',
-                                            color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                            {sklbi.level}
+                            </div>
+
+                            <span
+                              className="font-bold"
+                              style={{
+                                background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                              }}
+                            >
+                              {sklbi.level}
                             </span>
-                            </div>
-                            <div className='h-2 w-full rounded-full p-0.5'
-                            style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
-                              <div className='h-full rounded-full'
-                              style={{width:sklbi.level,
-                                      backgroundColor: sklbi.color,
-                                      boxShadow: `0 0 10px ${sklbi.color}`
-                                    }}></div>
-                            </div>
+                          </div>
+
+                          <div
+                            className="h-2 w-full rounded-full p-0.5"
+                            style={{
+                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                            }}
+                          >
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: sklbi.level,
+                                backgroundColor: sklbi.color,
+                                boxShadow: `0 0 10px ${sklbi.color}`
+                              }}
+                            />
+                          </div>
                         </div>
-                      
-                    )
-                  })}
-                </div>
-                </div>
-                {/* ========================================================
-                          //Data Analysis & Modelling(DM)
-                ======================================================== */}
-                {/* Heading*/}
-                <div>
-                <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
-                    <h1 className='font-bold title-font mb-4'
-                    style={{color: darkMode ? 'white' : '#1f3927'}}>
-                       Data Analysis & Modelling Tools :
-                    </h1>
-                </div>
-                
-                {/* Skill DM */}
-                <div className='space-y-8'
-                data-aos='fade-up'
-                    data-aos-delay='200'>
-                  {skillsDM.map((skldm) => {
-                    const sklbiicon = skldm.icon;
-                    return (
-                      <div key= {skldm.id} className='group'>
-                        <div className='flex items-center justify-between mb-2'>
-                          <div className='flex items-center gap-3'>
-                            <div className='p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300'>
-                              <img src={skldm.icon}
-                                    alt={skldm.name}
-                                    className='w-10 h-10 object-contain '/>
-                            </div>
-                            <span className='text-2xl font-bold tracking-wide'
-                            style={{color: darkMode ? 'white' : '#1f2937'}}>
-                              {skldm.name}
+                      ))}
+                    </div>
+                  </div>
+
+
+                  {/* ========================* Data Analysis & Modelling (DM) *================================= */}
+                  <div className="flex flex-col">
+                    <div
+                      className="sm:text-xl text-xl text-left mt-4 mb-4"
+                      data-aos="fade-up"
+                    >
+                      <h1
+                        className="font-bold font-Archivo-Narrow title-font mb-4"
+                        style={{ color: darkMode ? 'white' : '#1f3927' }}
+                      >
+                        {/* Data Analysis & Modelling Tools: */}
+                        Data Modelling Tools:
+                      </h1>
+                    </div>
+
+                    <div className="space-y-8">
+                      {skillsDM.slice(0, 5).map((skldm) => (
+                        <div key={skldm.id} className="group h-22.5">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className="p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300">
+                                <img
+                                  src={skldm.icon}
+                                  alt={skldm.name}
+                                  className="w-10 h-10 object-contain"
+                                />
+                              </div>
+
+                              <span
+                                className="font-bold tracking-wide"
+                                style={{
+                                  color: darkMode ? 'white' : '#1f2937'
+                                }}
+                              >
+                                {skldm.name}
                               </span>
-                          </div>
-                          <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
-                                            WebkitBackgroundClip:'text',
-                                            backgroundClip: 'text',
-                                            color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                            {skldm.level}
+                            </div>
+
+                            <span
+                              className="font-bold"
+                              style={{
+                                background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                              }}
+                            >
+                              {skldm.level}
                             </span>
-                            </div>
-                            <div className='h-2 w-full rounded-full p-0.5'
-                            style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
-                              <div className='h-full rounded-full'
-                              style={{width:skldm.level,
-                                      backgroundColor: skldm.color,
-                                      boxShadow: `0 0 10px ${skldm.color}`
-                                    }}></div>
-                            </div>
+                          </div>
+
+                          <div
+                            className="h-2 w-full rounded-full p-0.5"
+                            style={{
+                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                            }}
+                          >
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: skldm.level,
+                                backgroundColor: skldm.color,
+                                boxShadow: `0 0 10px ${skldm.color}`
+                              }}
+                            />
+                          </div>
                         </div>
-                      
-                    )
-                  })}
-                </div>
-                </div>
-                
+                      ))}
+                    </div>
+                  </div>
+
+
+                  {/* ========================* Programming Languages (PL) *================================= */}
+                  <div className="flex flex-col">
+                    <div
+                      className="sm:text-xl text-xl text-left mt-4 mb-4"
+                      data-aos="fade-up"
+                    >
+                      <h1
+                        className="font-bold font-Archivo-Narrow title-font mb-4"
+                        style={{ color: darkMode ? 'white' : '#1f3927' }}
+                      >
+                        Programming Languages Tools:
+                      </h1>
+                    </div>
+
+                    <div className="space-y-8">
+                      {skillsPL.slice(0, 5).map((sklpl) => (
+                        <div key={sklpl.id} className="group h-22.5">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className="p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300">
+                                <img
+                                  src={sklpl.icon}
+                                  alt={sklpl.name}
+                                  className="w-10 h-10 object-contain"
+                                />
+                              </div>
+
+                              <span
+                                className="font-bold tracking-wide"
+                                style={{
+                                  color: darkMode ? 'white' : '#1f2937'
+                                }}
+                              >
+                                {sklpl.name}
+                              </span>
+                            </div>
+
+                            <span
+                              className="font-bold"
+                              style={{
+                                background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                              }}
+                            >
+                              {sklpl.level}
+                            </span>
+                          </div>
+
+                          <div
+                            className="h-2 w-full rounded-full p-0.5"
+                            style={{
+                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                            }}
+                          >
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: sklpl.level,
+                                backgroundColor: sklpl.color,
+                                boxShadow: `0 0 10px ${sklpl.color}`
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+
+                  {/* ========================* Database Softwares (DB) *================================= */}
+                  <div className="flex flex-col">
+                    <div
+                      className="sm:text-xl text-xl text-left mt-4 mb-4"
+                      data-aos="fade-up"
+                    >
+                      <h1
+                        className="font-bold font-Archivo-Narrow title-font mb-4"
+                        style={{ color: darkMode ? 'white' : '#1f3927' }}
+                      >
+                        Database Softwares Tools:
+                      </h1>
+                    </div>
+
+                    <div className="space-y-8">
+                      {skillsDB.slice(0, 5).map((skldb) => (
+                        <div key={skldb.id} className="group h-22.5">
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className="p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300">
+                                <img
+                                  src={skldb.icon}
+                                  alt={skldb.name}
+                                  className="w-10 h-10 object-contain"
+                                />
+                              </div>
+
+                              <span
+                                className="font-bold tracking-wide"
+                                style={{
+                                  color: darkMode ? 'white' : '#1f2937'
+                                }}
+                              >
+                                {skldb.name}
+                              </span>
+                            </div>
+
+                            <span
+                              className="font-bold"
+                              style={{
+                                background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent'
+                              }}
+                            >
+                              {skldb.level}
+                            </span>
+                          </div>
+
+                          <div
+                            className="h-2 w-full rounded-full p-0.5"
+                            style={{
+                              backgroundColor: darkMode ? '#374151' : '#e5e7eb'
+                            }}
+                          >
+                            <div
+                              className="h-full rounded-full"
+                              style={{
+                                width: skldb.level,
+                                backgroundColor: skldb.color,
+                                boxShadow: `0 0 10px ${skldb.color}`
+                              }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+</div>
                 </div>
                {/* ======================= ** End ** =======================================  */}
-                
-                
-                {/* Skill BI */}
-                <div className='space-y-8'>
-                  {skillsBI.map((sklbi) => {
-                    const sklbiicon = sklbi.icon;
-                    return (
-                      <div key= {sklbi.id} className='group'>
-                        <div className='flex items-center justify-between mb-2'>
-                          <div className='flex items-center gap-3'>
-                            <div className='p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300'>
-                              <img src={sklbi.icon}
-                                    alt={sklbi.name}
-                                    className='w-10 h-10 object-contain '/>
-                            </div>
-                            <span className='text-2xl font-bold tracking-wide'
-                            style={{color: darkMode ? 'white' : '#1f2937'}}>
-                              {sklbi.name}
-                              </span>
-                          </div>
-                          <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
-                                            WebkitBackgroundClip:'text',
-                                            backgroundClip: 'text',
-                                            color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                            {sklbi.level}
-                            </span>
-                            </div>
-                            <div className='h-2 w-full rounded-full p-0.5'
-                            style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
-                              <div className='h-full rounded-full'
-                              style={{width:sklbi.level,
-                                      backgroundColor: sklbi.color,
-                                      boxShadow: `0 0 10px ${sklbi.color}`
-                                    }}></div>
-                            </div>
-                        </div>
-                      
-                    )
-                  })}
-                </div>
 
-                {/* My Skill set 2 Heading*/}
-                <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
-                    <h1 className='font-bold title-font mb-4'
-                    style={{color: darkMode ? 'white' : '#1f3927'}}>
-                        Data Analysis & Modelling Tools :
-                    </h1>
-                </div>
-              
-
-                
-
-                {/* My Skill Set-2 */}
-                
                 {/* Statistical Skills Heading*/}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
@@ -270,7 +392,7 @@ const Ggg = ( {darkMode}) => {
                         Statistical Skills :
                     </h1>
                 </div>
-
+                
                 {/* Statistical Skills*/}
                 <div className='flex flex-wrap gap-1.5 mb-4'>
                     {stats.map((itm, idx) => (
