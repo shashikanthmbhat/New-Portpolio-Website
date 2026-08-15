@@ -12,6 +12,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Ggg from "./components/Ggg"
 import Expirience from "./components/Expirience"
+import Education from "./components/Education"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true)
@@ -45,7 +46,8 @@ const App = () => {
       {/* <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
       {/* <Hero darkMode={darkMode}/>
       <About darkMode={darkMode}/> */}
-      <Expirience darkMode={darkMode}/>
+      {/* <Expirience darkMode={darkMode}/> */}
+      <Education darkMode={darkMode}/>
       {/* <Skills darkMode={darkMode}/> */}
       {/* <Ggg darkMode={darkMode}/> */}
       {/* <Project darkMode={darkMode}/>

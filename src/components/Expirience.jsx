@@ -1,5 +1,6 @@
 import React from 'react'
-import { BriefcaseIcon, Building, Calendar } from 'lucide-react';
+import { BriefcaseIcon, Building, Calendar, CheckCircle, GraduationCap } from 'lucide-react';
+
 
 const Expirience = ({ darkMode }) => {
   const Expiriences = [
@@ -36,10 +37,30 @@ const Expirience = ({ darkMode }) => {
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit']
     }
   ];
+
+  const educationData = [
+    {
+      id: 1,
+      degree: 'Masters Of Science (M.Sc) (Statistics)',
+      duration: '2013-2015',
+      collage: 'Mangalore University',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+
+    {
+      id: 2,
+      degree: 'Batulers Of Science (B.Sc)',
+      duration: '2010-2013',
+      collage: 'Mangalore University',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+  ]
   return (
     <section id="expirience" className={`min-h-screen overflow-hidden flex items-start justify-center z-10 px-4 sm:px-6 pt-23`}>
       <div data-aos='fade-left'
         data-aos-delay='300'>
+
+          {/* Work Expirience Header */}
           <header>
                 <h1 className='text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text'
                 style={{ color: darkMode ? 'white' : '#1f2937' }}
@@ -94,12 +115,16 @@ const Expirience = ({ darkMode }) => {
                             ))}
                           </ul>
                         </div>
-                        {/* =============End=================== */}
+                        
                       </div>
                     </div>
                   </div>
               ))}
             </div>
+            {/* =============Work Expirience End =================== */}
+
+
+
       </div>
     </section>
   )
