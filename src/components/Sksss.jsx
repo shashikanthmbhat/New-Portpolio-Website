@@ -4,7 +4,7 @@ import { BriefcaseIcon, Building, Calendar, CheckCircle, GraduationCap } from 'l
 
 
 
-const Expirience = ( {darkMode}) => {
+const Sksss = ( {darkMode}) => {
 
   const headerWe = {
     title1: 'Work',
@@ -49,7 +49,7 @@ const Expirience = ( {darkMode}) => {
 
   return (
     <section 
-    id='expirience'
+    id='sksss'
     className='py-14 relative overflow-hidden'>
         <div className='py-14 relative overflow-hidden'>
             <div className='container px-5 py-14 mx-auto'>
@@ -132,4 +132,4 @@ const Expirience = ( {darkMode}) => {
   );
 };
 
-export default Expirience
+export default Sksss
