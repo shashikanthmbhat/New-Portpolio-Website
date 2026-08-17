@@ -14,6 +14,7 @@ import Ggg from "./components/Ggg"
 import Expirience from "./components/Expirience"
 import Education from "./components/Education"
 import Sksss from "./components/sksss"
+import Ddkk from "./components/ddkk"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true)
@@ -45,11 +46,12 @@ const App = () => {
     }>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       {/* <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
-      {/* <Hero darkMode={darkMode}/>*/}
+      {/* <Hero darkMode={darkMode}/> */}
       {/* <About darkMode={darkMode}/> */}
-      <Expirience darkMode={darkMode}/>
+      {/* <Expirience darkMode={darkMode}/> */}
       <Education darkMode={darkMode}/>
       {/* <Sksss darkMode={darkMode}/> */}
+      {/* <Ddkk darkMode={darkMode}/> */}
       {/* <Skills darkMode={darkMode}/> */}
       {/* <Ggg darkMode={darkMode}/> */}
       {/* <Project darkMode={darkMode}/>

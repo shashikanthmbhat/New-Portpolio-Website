@@ -1,42 +1,17 @@
 import React from 'react'
-import educ from '../assets/Me/educ.png'
-import { BriefcaseIcon, Building, Calendar, CheckCircle, GraduationCap } from 'lucide-react';
+import { BriefcaseIcon, Building, Calendar, CheckCircle, GraduationCap, Award, ExternalLink, ShieldCheck } from 'lucide-react';
+import { div, title } from 'framer-motion/client'
 
-const Education = ({ darkMode }) => {
-      const Expiriences = [
-    {id: 1, 
-    role: 'PowerBI Analyst', 
-    compeny: 'A.J. Hospital & Research Centre',
-    date: 'Sep-2024 - Jun-2025',
-    disc: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit']
-    },
 
-    {id: 2, 
-    role: 'PowerBI Analyst', 
-    compeny: 'A.J. Hospital & Research Centre',
-    date: 'Mar-2023 - Aug-2024',
-    disc: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit']
-    },
 
-    {id: 3, 
-    role: 'Statistician', 
-    compeny: 'A.J. Hospital & Research Centre',
-    date: 'Nov-2015 - Feb-2023',
-    disc: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit']
-    }
-  ];
+
+const Education = ( {darkMode}) => {
+
+  const headerEdu= {
+    title1: 'My',
+    title2: 'Education',
+    description: 'I deliver impactful digital solutions by combining technical expertise with creative problem-solving. My professional journey features a proven track record of successful, high-quality projects.'
+    };
 
     const educationData = [
     {
@@ -56,145 +31,175 @@ const Education = ({ darkMode }) => {
     },
   ]
 
+  const certifications = [
+          {id: 1,
+          title: 'Lorem ipLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis',
+          issuer: 'Course Era',
+          date: 'Dec-2023',
+          link: '#',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed fermentum erat. Fusce dignissim nibh vel nunc pulvinar, vitae mollis leo gravida. Donec placerat eu'
+          },
+  
+          {id: 2,
+          title: 'Lorem ipLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis',
+          issuer: 'Amazon Web Service',
+          date: 'Jun-2024',
+          link: '#',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed fermentum erat. Fusce dignissim nibh vel nunc pulvinar, vitae mollis leo gravida. Donec placerat eu'
+          }
+      ]
+
+
+// return <div className={cardStyles}>Card Content</div>;
+
+
+
   return (
-    <section className='text-white py-20 overflow-hidden' id='education'>
-        {/* Education */}
-        <div className='max-w-7xl mx-auto px-6 lg:px-16'>
-            <div className='mb-16'>
+    <section 
+    id='education'
+    className='py-14 relative overflow-hidden'>
+        <div className='py-14 relative overflow-hidden'>
+            <div className='container px-5 py-14 mx-auto'>
+                <div className='text-center mb-20' data-aos='fade-up'>
                 
-                <div className='flex flex-col lg:flex-row lg:items-start items-center gap-5'>
-                    {/* Work Expirience Details */}
-                    <div className='w-full lg:w-6/12 space-y-6'
-                    data-aos='fade-left'>
-                        {/* My Education Header */}
-                        <header>
-                        <h1 className='text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text'
-                            style={{ color: darkMode ? 'white' : '#1f2937' }}
-                            data-aos='fade-up'
-                            data-aos-delay='400'>
-                            Work <span style={{
-                                    background: 'linear-gradient(to right, #3b82f6,#06b6d4)',
-                                    WebkitBackgroundClip: 'text',
-                                    backgroundClip: 'text',
-                                    color: 'transparent',
-                                    }}>
-                                    Expirience
-                                    </span>
-                            </h1>
-                        </header>
+                    {/* Headding : Work Expirience */}
+                    <h1 className='sm:text-4xl text-3xl font-bold title-font mb-4'
+                    style={{color: darkMode ? 'white' : '#1f3927'}}>
+                        {headerEdu.title1} <span style={{
+                            background: 'linear-gradient(to right, #3b82f6, #06d6b4)',
+                            WebkitBackgroundClip: 'text',
+                            backgroundClip: 'text',
+                            color: 'transparent'
+                            }}>
+                                {headerEdu.title2}
+                            </span>
+                    </h1>
 
-                        {/* Work Expirience Details */}
-                        <div className='space-y-6'>
-                            {Expiriences.map((exp) => (
-                                <div key={exp.id}
-                                className='group relative p-6 rounded-2xl bg-[#1f1641] hover:border-blue-500/50 transition-all duration-300'>
-                                    <div className='flex gap-4'>
-                                        <div     className='shrink-0 mt-1'>
-                                            <div className='p-3 bg-[#050816] rounded-xl border-gray-800 group-hover: border-blue-600 transition-colors'>
-                                                <BriefcaseIcon className='text-blue-500' size={24}/>
-                                            </div>
-                                        </div>
-                                          
-                                        <div className='grow'>
-                                        {/* Role */}
-                                        <h3 className='text-xl font-bold text-white group-hover:text-blue-500 transition-colors'>
-                                            {exp.role}
-                                        </h3>
-                    
-                                        {/* company & Date */}
-                                        <div className='flex flex-col sm:flex-row sm:items-center italic justify-between gap-2 sm:gap-4 mt-2 text-sm text-gray-400'>
-                                            <span className='flex items-center gap-1.5'>
-                                                <Building size={14} className='text-blue-500' />
-                                                {exp.compeny}
-                                            </span>
-                                            <span className='flex items-center italic gap-1.5'>
-                                                <Calendar size={14} className='text-blue-500' />
-                                                {exp.date}
-                                            </span>
-                                        </div>
-                                        <br/>
-                                        {/* Discription (bullet list) */}
-                                        <div>
-                                            <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-                                                {exp.disc.map((bullet, index) => (
-                                                  <li key={index}>{bullet}</li>
-                                                ))}
-                                            </ul>
-                                        </div>  
-                                        </div>
-                                    </div>
-                                </div>
-                                ))}
-                                </div>
-                                {/* =============Work Expirience End =================== */}
-
-                                </div>
-                                {/** =======================End Of Work Expirience ========== */}
-                                
-                                {/* Education Details */}
-                                <div className='w-full lg:w-6/12 space-y-6'
-                                data-aos='fade-left'>
-                                    <header>
-                                    <h1 className='text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text'
-                                        style={{ color: darkMode ? 'white' : '#1f2937' }}
-                                        data-aos='fade-up'
-                                        data-aos-delay='400'>
-                                        My <span style={{
-                                                background: 'linear-gradient(to right, #3b82f6,#06b6d4)',
-                                                WebkitBackgroundClip: 'text',
-                                                backgroundClip: 'text',
-                                                color: 'transparent',
-                                                }}>
-                                                Education
-                                                </span>
-                                        </h1>
-                                    </header>
-                                    {educationData.map((edu) => (
-                            <div
-                                    key={edu.id}
-                                    className='group relative p-6 rounded-2xl bg-[#111a3e] transition-all duration-300 hover:border-blue-500/50'>
-                                        <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4'>
-                                        <div className='flex items-center gap-3'>
-                                            {/* Graduation cap and digree Name */}
-                                            <div className='p-2 bg-[#050816] rounded-lg border border-blue-500/20 group-hover:border-blue-500 transition-colors'>
-                                            <GraduationCap className='text-blue-500' size={24} />
-                                            </div>
-                                            <div>
-                                            <h3 className='text-lg font-bold text-white group-hover:text-blue-500 transition-colors'>
-                                                {edu.degree}
-                                            </h3>
-                                            <p className='text-gray-400 text-sm'>
-                                                {edu.collage}
-                                            </p>
-                                            </div>
-                                        </div>
-                                        <div className='flex items-center gap-2 text-xs font-medium bg-[#050816] px-3 py-1 rounded-full border-gray-700 w-fit'>
-                                            <Calendar size={12} className='text-blue-500' />
-                                            {edu.duration}
-                                            </div>
-                                        </div>
-                                        <p className='text-gray-400 text-sm leading-relaxed mb-4'>
-                                        {edu.details}
-                                        </p>
-                                        <div className='flex items-center gap-2 text-[10px] uppercase-wider text-blue-500 font-bold'>
-                                        <CheckCircle size={12} />
-                                        Academic Excellence
-                                        </div>
-                                    </div>
-                                    ))}
-                                </div>
-                                {/* =============Work Education End =================== */}
-
+                    {/* Discription - Education */}
+                    <p className='text-lg max-w-2xl mx-auto leading-relaxed'
+                    style={{ color: darkMode ? '#d1d5db' : '#4b5563'}}>
+                       {headerEdu.description}
+                    </p>
                 </div>
+                <div className='flex flex-col lg:flex-row lg:items-start items-center gap-7'>
+                  {/* ============================ Education (Start) ============================ */}
+                  {/* Education Details */}
+                  <div className='w-full lg:w-1/2 space-y-6'
+                  data-aos='fade-left'>
+                  {/* Education Heading*/}
+                  <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
+                      <h1 className='font-bold title-font mb-4'
+                      style={{color: darkMode ? 'white' : '#1f3927'}}>
+                          Education Details
+                      </h1>
+                  </div>
+                  {educationData.map((edu) => (
+                  <div
+                    key={edu.id}
+                    className='group relative p-6 rounded-2xl bg-linear-to-r from-blue-900/10 to-blue-900/5 transition-all duration-300 hover:border-blue-500/50'>
+                    <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4'>
+                      
+                      {/* Graduation Cap and digree Name & Collage */}
+                      <div className='flex items-center gap-3'>
+                        {/* Graduation Cap */}
+                        <div className={`p-2 rounded-lg border-transparent group-hover:border-blue-600 transition-colors
+                        ${darkMode ? 'bg-gray-300' : 'bg-gray-700'}`}>
+                          <GraduationCap size={24} color={darkMode ? '#03060e' : '#e9ebf3'} />
+                        </div>
+
+                        {/* Digree Name & Collage */}
+                        <div>
+                          <h3 className='text-lg font-bold text-white group-hover:text-blue-500 transition-colors'>
+                            {edu.degree}
+                          </h3>
+                          <p className='text-gray-400 text-sm'>
+                            {edu.collage}
+                          </p>
+                        </div>
+                      </div>
+                      {/* Duration */}
+                      <div className={`flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full w-fit
+                        ${darkMode ? 'bg-gray-300' : 'bg-gray-700'} ${darkMode ? 'text-[#03060e]' : 'text-[#e9ebf3]'}`}>
+                          <Calendar size={12} color={darkMode ? '#03060e' : '#e9ebf3'} />
+                          {edu.duration}
+                      </div> 
+                    </div>
+                    {/* Education Details */}
+                    <p className='text-gray-400 text-sm leading-relaxed mb-4'>
+                    {edu.details}
+                    </p>
+                    <div className='flex items-center gap-2 text-[10px] uppercase-wider text-blue-500 font-bold'>
+                      <CheckCircle size={12} />
+                      Academic Excellence
+                    </div>
+                  </div>
+                  ))}
+                  </div>
+                  {/* ============================ Education (End) ============================== */}
+
+                  {/* ============================ Cirtification (Start) ============================ */}
+                  {/* Cirtification Details */}
+                  <div className='w-full lg:w-1/2 space-y-6'
+                  data-aos='fade-left'>
+                  {/* Cirtification Heading*/}
+                  <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
+                      <h1 className='font-bold title-font mb-4'
+                      style={{color: darkMode ? 'white' : '#1f3927'}}>
+                          Cirtification Details
+                      </h1>
+                  </div>
+                  
+                  {/* ======================== Start ================================== */}
+                  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6'>
+                      {certifications.map((cert) => (
+                          <div key={cert.id} data-aos='zoom-in'
+                          className={`group relative border p-6 rounded-2xl transition-all duration-300 
+                            ${darkMode 
+                                 ? 'bg-[#111a3e] border-[#1f1641] hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                 : 'bg-[#c6ccd2] border-[#aab2bb] hover:border-gray-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                            }`}>
+                              <div className={`absolute -top-4 -right-4 p-3 rounded-xl shadow-lg transform group-hover:rotate-12
+                                ${darkMode
+                                    ? 'bg-blue-500'
+                                    : 'bg-gray-500'
+                                }`}>
+                                  <Award className='text-white' size={24} />
+                              </div>
+                              <div className='flex items-center gap-4 mb-4 text-xs text-gray-400'
+                              style={{color: darkMode ? '#9ca3af' : '#0284C7'}}>
+                                  <span className='flex items-center gap-1'>
+                                      <ShieldCheck size={14} style={{color: darkMode ? '#2196f3' : '#1E293B'}} />
+                                      {cert.issuer}
+                                  </span>
+                                  <span className='flex items-center gap-1'>
+                                      <Calendar size={14} style={{color: darkMode ? '#2196f3' : '#1E293B'}} />
+                                      {cert.date}
+                                  </span>
+                              </div>
+                              <h3 className='text-xl font-bold mb-3 group-hover:text-blue-500 transition-colors'>
+                                  {cert.title}
+                              </h3>
+                              <p className='text-gray-400 tex-sm mb-6 line-clamp-2'>
+                                  {cert.desc}
+                              </p>
+                              <a href={cert.link}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1'>
+                                  View Cirtificate <ExternalLink size={14} />
+                              </a>
+                          </div>
+                      ))}
+                  </div>
+                  {/* ==================== End ============================= */}
+                  </div>
+                  {/* ============================ Cirtification (End) ============================== */} 
+                </div>
+                
             </div>
         </div>
-
     </section>
-  )
-}
+  );
+};
 
 export default Education
-
-        
-        
-        

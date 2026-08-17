@@ -1,7 +1,5 @@
 import React from 'react'
 import { BriefcaseIcon, Building, Calendar, CheckCircle, GraduationCap } from 'lucide-react';
-//Expirience
-
 
 
 const Expirience = ( {darkMode}) => {
@@ -68,7 +66,7 @@ const Expirience = ( {darkMode}) => {
                             </span>
                     </h1>
 
-                    {/* Discription - My Skills */}
+                    {/* Discription - WOrk Expirience */}
                     <p className='text-lg max-w-2xl mx-auto leading-relaxed'
                     style={{ color: darkMode ? '#d1d5db' : '#4b5563'}}>
                        {headerWe.description}
@@ -117,10 +115,8 @@ const Expirience = ( {darkMode}) => {
                                               <li key={index}>{bullet}</li>
                                             ))}
                                           </ul>
-                                        </div>
-                                        
-                                      </div>
-                                      
+                                        </div>  
+                                      </div>  
                                     </div>
                                   </div>
                               ))}
