@@ -33,19 +33,19 @@ const Education = ( {darkMode}) => {
 
   const certifications = [
           {id: 1,
-          title: 'Lorem ipLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis',
-          issuer: 'Course Era',
-          date: 'Dec-2023',
+          title: 'Microsoft Power BI 2026-Complete Course-Beginner to Advanced',
+          issuer: 'Course Era/Ajay P',
+          date: 'Apr-2026',
           link: '#',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed fermentum erat. Fusce dignissim nibh vel nunc pulvinar, vitae mollis leo gravida. Donec placerat eu'
+          desc: 'Master Microsoft Power BI Desktop and Power BI Services, Visualization with Microsoft PL-300 Certification Preparation'
           },
   
           {id: 2,
-          title: 'Lorem ipLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sagittis',
-          issuer: 'Amazon Web Service',
-          date: 'Jun-2024',
+          title: 'Python for Data Science, AI & Development',
+          issuer: 'Courseera/IBM',
+          date: 'Jun-2025',
           link: '#',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed fermentum erat. Fusce dignissim nibh vel nunc pulvinar, vitae mollis leo gravida. Donec placerat eu'
+          desc: 'Master foundational Python syntax, logic, and OOP to extract web data via APIs and scraping, utilizing Pandas, Numpy, and Jupyter.'
           }
       ]
 
@@ -89,47 +89,61 @@ const Education = ( {darkMode}) => {
                   {/* Education Heading*/}
                   <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                       <h1 className='font-bold title-font mb-4'
-                      style={{color: darkMode ? 'white' : '#1f3927'}}>
+                      style={{color: darkMode ? 'white' : 'black'}}>
                           Education Details
                       </h1>
                   </div>
                   {educationData.map((edu) => (
                   <div
                     key={edu.id}
-                    className='group relative p-6 rounded-2xl bg-linear-to-r from-blue-900/10 to-blue-900/5 transition-all duration-300 hover:border-blue-500/50'>
+                    className={`group relative p-6 border rounded-2xl transition-all duration-300
+                    ${darkMode 
+                        ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                        : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                    }`}>
                     <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4'>
                       
                       {/* Graduation Cap and digree Name & Collage */}
                       <div className='flex items-center gap-3'>
                         {/* Graduation Cap */}
-                        <div className={`p-2 rounded-lg border-transparent group-hover:border-blue-600 transition-colors
-                        ${darkMode ? 'bg-gray-300' : 'bg-gray-700'}`}>
-                          <GraduationCap size={24} color={darkMode ? '#03060e' : '#e9ebf3'} />
+                        <div className={`p-2 rounded-lg border-transparent transition-colors group-hover:rotate-12
+                          ${darkMode ? 'bg-blue-500' : 'bg-sky-300'}`}>
+                          <GraduationCap size={24} color={darkMode ? 'white' : 'black'} />
                         </div>
 
                         {/* Digree Name & Collage */}
                         <div>
-                          <h3 className='text-lg font-bold text-white group-hover:text-blue-500 transition-colors'>
+                          <h3 className={` text-lg font-bold transition-colors
+                            ${darkMode 
+                                 ? 'text-white hover:text-blue-500' 
+                                 : 'text-black hover:text-sky-500'
+                            }`}>
                             {edu.degree}
                           </h3>
-                          <p className='text-gray-400 text-sm'>
+                          <p className='text-sm'
+                                style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                             {edu.collage}
                           </p>
                         </div>
                       </div>
                       {/* Duration */}
                       <div className={`flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full w-fit
-                        ${darkMode ? 'bg-gray-300' : 'bg-gray-700'} ${darkMode ? 'text-[#03060e]' : 'text-[#e9ebf3]'}`}>
-                          <Calendar size={12} color={darkMode ? '#03060e' : '#e9ebf3'} />
+                        ${darkMode 
+                          ? 'bg-blue-500 text-white' 
+                          : 'bg-sky-300 text-black'}
+                        `}>
+                          <Calendar size={12} color={darkMode ? 'white' : 'black'} />
                           {edu.duration}
                       </div> 
                     </div>
                     {/* Education Details */}
-                    <p className='text-gray-400 text-sm leading-relaxed mb-4'>
+                    {/* <p className='text-gray-400 text-sm leading-relaxed mb-4'
+                    style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                     {edu.details}
-                    </p>
-                    <div className='flex items-center gap-2 text-[10px] uppercase-wider text-blue-500 font-bold'>
-                      <CheckCircle size={12} />
+                    </p> */}
+                    <div className='flex items-center gap-2 text-[10px] uppercase-wider font-bold'
+                      style={{color: darkMode ? '#3b82f6' : '#0ea5e9'}}>
+                      <CheckCircle size={12} color={darkMode ? '#3b82f6' : '#0ea5e9'} />
                       Academic Excellence
                     </div>
                   </div>
@@ -144,7 +158,7 @@ const Education = ( {darkMode}) => {
                   {/* Cirtification Heading*/}
                   <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                       <h1 className='font-bold title-font mb-4'
-                      style={{color: darkMode ? 'white' : '#1f3927'}}>
+                      style={{color: darkMode ? 'white' : 'black'}}>
                           Cirtification Details
                       </h1>
                   </div>
@@ -155,39 +169,36 @@ const Education = ( {darkMode}) => {
                           <div key={cert.id} data-aos='zoom-in'
                           className={`group relative border p-6 rounded-2xl transition-all duration-300 
                             ${darkMode 
-                                 ? 'bg-[#111a3e] border-[#1f1641] hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
-                                 : 'bg-[#c6ccd2] border-[#aab2bb] hover:border-gray-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                 ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                 : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
                             }`}>
                               <div className={`absolute -top-4 -right-4 p-3 rounded-xl shadow-lg transform group-hover:rotate-12
-                                ${darkMode
-                                    ? 'bg-blue-500'
-                                    : 'bg-gray-500'
-                                }`}>
-                                  <Award className='text-white' size={24} />
+                                ${darkMode ? 'bg-blue-500' : 'bg-sky-300'}`}>
+                                  <Award size={24} style={{color: darkMode ? 'white' : 'black'}} />
                               </div>
-                              <div className='flex items-center gap-4 mb-4 text-xs text-gray-400'
-                              style={{color: darkMode ? '#9ca3af' : '#0284C7'}}>
+                              <div className='flex items-center gap-4 mb-4 text-xs'
+                              style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                                   <span className='flex items-center gap-1'>
-                                      <ShieldCheck size={14} style={{color: darkMode ? '#2196f3' : '#1E293B'}} />
+                                      <ShieldCheck size={14} style={{color: darkMode ? '#2196f3' : '#0EA5E9'}} />
                                       {cert.issuer}
                                   </span>
-                                  <span className='flex items-center gap-1'>
-                                      <Calendar size={14} style={{color: darkMode ? '#2196f3' : '#1E293B'}} />
+                                  <span className='flex items-center gap-1'
+                                  style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
+                                      <Calendar size={14} style={{color: darkMode ? '#2196f3' : '#0EA5E9'}} />
                                       {cert.date}
                                   </span>
                               </div>
-                              <h3 className='text-xl font-bold mb-3 group-hover:text-blue-500 transition-colors'>
+                              <h3 className={`text-xl font-bold mb-3 transition-colors
+                                 ${darkMode 
+                                 ? 'text-white hover:text-blue-500' 
+                                 : 'text-black hover:text-sky-500'
+                            }`}>
                                   {cert.title}
                               </h3>
-                              <p className='text-gray-400 tex-sm mb-6 line-clamp-2'>
+                              <p className={`text-sm mb-6
+                                ${darkMode ? 'text-gray-400' : 'text-gray-800'}`}>
                                   {cert.desc}
                               </p>
-                              <a href={cert.link}
-                              target='_blank'
-                              rel='noopener noreferrer'
-                              className='inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1'>
-                                  View Cirtificate <ExternalLink size={14} />
-                              </a>
                           </div>
                       ))}
                   </div>

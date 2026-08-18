@@ -17,12 +17,12 @@ const About = ({ darkMode }) => {
   return (
    <section id="about" className={`min-h-screen overflow-hidden flex items-start justify-center z-10 px-4 sm:px-6 pt-23`}>
     {/* 1. Changed items-center to items-stretch to enforce identical column heights on desktop */}
-    <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-stretch">
+    <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
         
         {/** Left Half - About me Img (Now fills height) */}
         <div className='w-full flex justify-center lg:justify-start h-[97%]' data-aos='fade-right'>
             {/* 2. Added h-full to the absolute/relative positioning layout */}
-            <div className='relative w-full max-w-sm lg:max-w-md h-full min-h-87.5 lg:min-h-0'>
+            <div className='relative w-full max-w-sm lg:max-w-md min-h-87.5 lg:min-h-0'>
                 {/**Shadow Outline */}
                 <motion.div className='absolute h-full w-full z-0 p-2 rounded-2xl shadow-lg border-3 border-blue-500'
                 style={{ boxShadow: '0 0 20px rgb(34 211 238)' }}>
@@ -61,8 +61,11 @@ const About = ({ darkMode }) => {
             </header>
 
             {/* Description */}
-            <p className={`text-sm sm:text-base lg:text-lg text-justify mb-6 sm:mb-8 leading-relaxed bg-linear-to-r from-blue-900/10 to-blue-900/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
-            ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
+            <p className={`text-sm sm:text-base border lg:text-lg text-justify mb-6 sm:mb-8 leading-relaxed p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
+                ${darkMode 
+                    ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                    : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                }`}
             data-aos='fade-up'
             data-aos-delay='500'>
                     PowerBI Analyst | Experienced Statistician | Data-Driven Decision Maker | Research & Analytics Expert
@@ -72,16 +75,17 @@ const About = ({ darkMode }) => {
                     </span>
             </p>
             
-            <div className='flex flex-wrap justify-center lg:justify-start gap-10 sm:gap-6 lg:gap-8 mb-6 sm:mb-8'>
+            <div className='flex flex-wrap justify-evenly lg:justify-start gap-10 sm:gap-6 lg:gap-8 mb-6 sm:mb-8'>
                 
                 {/* Education */}
-                <div className='text-center'
+                <div className={`text-center`}
                 data-aos='zoom-in'
                 data-aos-delay='600'>
-                    <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400'>
+                    <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold
+                        ${darkMode ? 'text-[#3b82f6]' : 'text-[#0ea5e9]'}`}>
                         5+
                     </div>
-                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'text-gray-300' : 'text-gray-600'} `}>
+                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'white' : 'black'}`}>
                         Years of Education
                     </div>
                 </div>
@@ -90,10 +94,11 @@ const About = ({ darkMode }) => {
                 <div className='text-center'
                 data-aos='zoom-in'
                 data-aos-delay='650'>
-                    <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400'>
+                    <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400
+                        ${darkMode ? '#3b82f6' : '#0ea5e9'}`}>
                         10+
                     </div>
-                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'text-gray-300' : 'text-gray-600'} `}>
+                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'white' : 'black'}`}>
                         Years of Experience
                     </div>
                 </div>
@@ -102,10 +107,11 @@ const About = ({ darkMode }) => {
                 <div className='text-center'
                 data-aos='zoom-in'
                 data-aos-delay='700'>
-                    <div className='text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400'>
+                    <div className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-400
+                        ${darkMode ? '#3b82f6' : '#0ea5e9'}`}>
                         100+
                     </div>
-                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'text-gray-300' : 'text-gray-600'} `}>
+                    <div className={`text-xs sm:text-sm lg:text-base ${darkMode ? 'white' : 'black'}`}>
                         Projects completed
                     </div>
                 </div>

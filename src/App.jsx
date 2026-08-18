@@ -37,18 +37,26 @@ const App = () => {
     setDarkMode(newMode);
     document.documentElement.classList.toggle('dark');
   };
+  // Dark - #0f182b
+  //light - #97cadb
+
+  // className={
+  //     darkMode
+  //     ? 'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
+  //     : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'
+  //   }
 
   return (
     <div className={
       darkMode
-      ? 'bg-linear-to-br from-gray-900 via-[#0d182e] to-gray-900 min-h-screen'
-      : 'bg-linear-to-br from-gray-50 to-blue-50 min-h-screen'
+      ? 'bg-[#0f182b] min-h-screen'
+      : 'bg-[#d6e8ee] min-h-screen'
     }>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       {/* <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}/> */}
       {/* <Hero darkMode={darkMode}/> */}
-      {/* <About darkMode={darkMode}/> */}
-      {/* <Expirience darkMode={darkMode}/> */}
+      <About darkMode={darkMode}/>
+      <Expirience darkMode={darkMode}/>
       <Education darkMode={darkMode}/>
       {/* <Sksss darkMode={darkMode}/> */}
       {/* <Ddkk darkMode={darkMode}/> */}

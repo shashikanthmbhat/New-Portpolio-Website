@@ -74,54 +74,78 @@ const Expirience = ( {darkMode}) => {
                 </div>
                 {/* ============================ Start of Work Expirience ============================ */}
                 {/* Work Expirience Details */}
-                            <div className='space-y-6'>
-                              {Expiriences.map((exp) => (
-                                  <div key={exp.id}
-                                  className='group relative p-6 rounded-2xl bg-linear-to-r from-blue-900/10 to-blue-900/5 hover:border-blue-500/50 transition-all duration-300'
-                                  style={{color: darkMode ? 'text-gray-300' : 'text-gray-700'}}>
-                                    <div className='flex gap-4'>
-                                      <div className='shrink-0 mt-1'>
-                                        {/* Briefcase Icon */}
-                                        <div className={`p-3 rounded-xl border-transparent group-hover:border-blue-600 transition-colors ${
-                                            darkMode ? 'bg-gray-300' : 'bg-gray-700'
-                                            }`}>
-                                            <BriefcaseIcon size={24} color={darkMode ? '#03060e' : '#e9ebf3'} />
-                                        </div>
-
-                                      </div>
-                                      
-                                      <div className='grow'>
-                                        {/* Role */}
-                                        <h3 className='text-xl font-bold group-hover:text-blue-500 transition-colors'>
-                                          {exp.role}
-                                        </h3>
-                
-                                        {/* company & Date */}
-                                        <div className='flex flex-col sm:flex-row sm:items-center italic justify-between gap-2 sm:gap-4 mt-2 text-sm'>
-                                          <span className='flex items-center gap-1.5'>
-                                            <Building size={14} className='text-blue-500' />
-                                            {exp.compeny}
-                                          </span>
-                                          <span className='flex items-center italic gap-1.5'>
-                                            <Calendar size={14} className='text-blue-500' />
-                                            {exp.date}
-                                          </span>
-                                        </div>
-                                        <br/>
-                                         {/* Discription (bullet list) */}
-                                        <div className='lg:text-base sm:text-sm leading-relaxed mb-4'>
-                                          <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
-                                            {exp.disc.map((bullet, index) => (
-                                              <li key={index}>{bullet}</li>
-                                            ))}
-                                          </ul>
-                                        </div>  
-                                      </div>  
-                                    </div>
-                                  </div>
+                  {/* ============================ Education (Start) ============================ */}
+                  {/* Education Details */}
+                  <div className='w-full space-y-8'
+                    data-aos='fade-left'>
+                    {/* Education Heading*/}
+                    {Expiriences.map((exp) => (
+                    <div
+                      key={exp.id}
+                      className={`group relative p-6 border rounded-2xl transition-all duration-300
+                        ${darkMode 
+                            ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                            : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                          }`}>
+                      <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4'>
+                                        
+                      {/* Graduation Cap and digree Name & Collage */}
+                      <div className='flex items-center gap-3'>
+                      {/* Briefcase Icon */}
+                      <div className={`p-2 rounded-lg border-transparent transition-colors group-hover:rotate-12
+                        ${darkMode ? 'bg-blue-500' : 'bg-sky-300'}`}>
+                          <BriefcaseIcon size={36} color={darkMode ? 'white' : 'black'} />
+                      </div>
+                  
+                      {/* Role */}
+                      <div>
+                      <h3 className={` text-xl font-bold transition-colors
+                        ${darkMode 
+                          ? 'text-white hover:text-blue-500' 
+                          : 'text-black hover:text-sky-500'
+                        }`}>
+                        {exp.role}
+                        </h3>
+                         {/* company */}
+                         <div className='flex flex-col sm:flex-row sm:items-center italic justify-between gap-2 sm:gap-4 mt-2 text-sm'
+                         style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
+                            <span className='flex items-center gap-1.5'>
+                              <Building size={14} style={{color: darkMode ? '#9ca3af' : '#1f2937'}} />
+                              {exp.compeny}
+                            </span>
+                         </div>
+                        
+                      </div>
+                    </div>
+                     {/* Date */}
+                    <div className={`flex items-center gap-2 text-sm font-medium italic px-3 py-1 rounded-full w-fit
+                      ${darkMode 
+                        ? 'bg-blue-500 text-white' 
+                        : 'bg-sky-300 text-black'
+                      }`}>
+                      <Calendar size={12} color={darkMode ? 'white' : 'black'} />
+                      {exp.date}
+                    </div> 
+                  </div>
+                  <p className='lg:text-xl sm:text-base leading-relaxed mb-4'
+                    style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
+                    Discription :
+                  </p>
+                   {/* Discription (bullet list) */}
+                  <p className='lg:text-base sm:text-sm leading-relaxed mb-4'
+                        style={{color: darkMode ? 'white' : 'black'}}>
+                        <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                            {exp.disc.map((bullet, index) => (
+                             <li key={index}>{bullet}</li>
                               ))}
-                            </div>
-                {/* =============Work Expirience End ================================================== */} 
+                        </ul>
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* ============================ Education (End) ============================== */}
+                  
+            {/* =============Work Expirience End ================================================== */} 
             </div>
         </div>
     </section>
