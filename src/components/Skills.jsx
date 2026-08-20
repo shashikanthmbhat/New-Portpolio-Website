@@ -1,39 +1,80 @@
-// import Eexcel from '../assets/Skill_Icon/Eexcel.png'
-// import PpowerBI from '../assets/Skill_Icon/PpowerBI.png'
-// import Rr from '../assets/Skill_Icon/Rr.png'
-// import Sspss from '../assets/Skill_Icon/Sspss.png'
-// import Ppython from '../assets/Skill_Icon/Ppython.png'
-// import Ddax from  '../assets/Skill_Icon/Ddax.png'
-// import Vvba from  '../assets/Skill_Icon/Vvba.png'
-// import Ccsharp from  '../assets/Skill_Icon/Ccsharp.png'
-// import Ccplusplus from  '../assets/Skill_Icon/Ccplussplus.png'
-// import Rreact from '../assets/Skill_Icon/Rreact.png'
 
 //Business Inteligence (BI)
-import PpowerBI from '../assets/Skill_Icon/Logos_BI/powerbi.png'
-import Eexcel from '../assets/Skill_Icon/Logos_BI/excel.png'
-import Rr from '../assets/Skill_Icon/Logos_BI/r.png'
-import Sspss from '../assets/Skill_Icon/Logos_BI/spss.png'
-import Ppython from '../assets/Skill_Icon/Logos_BI/python.png'
+import PpowerBI from '../assets/Skill_Icon/Old/Logos_BI/powerbi.png'
+import Eexcel from '../assets/Skill_Icon/Old/Logos_BI/excel.png'
+import Rr from '../assets/Skill_Icon/Old/Logos_BI/r.png'
+import Sspss from '../assets/Skill_Icon/Old/Logos_BI/spss.png'
+import Ppython from '../assets/Skill_Icon/Old/Logos_BI/python.png'
 
 //Data Analysis & Modelling(DM)
-import Ddax from  '../assets/Skill_Icon/Logos_DM/dax.png'
-import Eetl from  '../assets/Skill_Icon/Logos_DM/etl.png'
-import Ppowerquerry from  '../assets/Skill_Icon/Logos_DM/powerquerry.png'
-import Wwarehousing from  '../assets/Skill_Icon/Logos_DM/Warehousing.png'
+import Ddax from  '../assets/Skill_Icon/Old/Logos_DM/dax.png'
+import Eetl from  '../assets/Skill_Icon/Old/Logos_DM/etl.png'
+import Ppowerquerry from  '../assets/Skill_Icon/Old/Logos_DM/powerquerry.png'
+import Wwarehousing from  '../assets/Skill_Icon/Old/Logos_DM/Warehousing.png'
 
 //Programming Languages(PL)
-import Vvba from '../assets/Skill_Icon/Logos_PL/vba.png'
-import Pdax from '../assets/Skill_Icon/Logos_PL/dax.png'
-import Rrpl from '../assets/Skill_Icon/Logos_PL/r.png'
-import Ccsharp from '../assets/Skill_Icon/Logos_PL/csharp.png'
-import Ccplusplus from '../assets/Skill_Icon/Logos_PL/cplusplus.png'
+import Vvba from '../assets/Skill_Icon/Old/Logos_PL/vba.png'
+import Pdax from '../assets/Skill_Icon/Old/Logos_PL/dax.png'
+import Rrpl from '../assets/Skill_Icon/Old/Logos_PL/r.png'
+import Ccsharp from '../assets/Skill_Icon/Old/Logos_PL/csharp.png'
+import Ccplusplus from '../assets/Skill_Icon/Old/Logos_PL/cplusplus.png'
 
 //Database Softwares(DB)
-import Mmysql from  '../assets/Skill_Icon/Logos_DB/mysql.png'
-import Mmongodb from  '../assets/Skill_Icon/Logos_DB/mongodb.png'
-import Ooracle from  '../assets/Skill_Icon/Logos_DB/oracle.png'
-import Mmcsqlserver from  '../assets/Skill_Icon/Logos_DB/mcsqlserver.png'
+import Mmysql from  '../assets/Skill_Icon/Old/Logos_DB/mysql.png'
+import Mmongodb from  '../assets/Skill_Icon/Old/Logos_DB/mongodb.png'
+import Ooracle from  '../assets/Skill_Icon/Old/Logos_DB/oracle.png'
+import Mmcsqlserver from  '../assets/Skill_Icon/Old/Logos_DB/mcsqlserver.png'
+
+//=======================================================================
+//Business Inteligence (BI)
+import Powerbi_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Power_bi-Blue_500.png'
+import Excel_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Excel-Blue_500.png'
+import R_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/R_BI-Blue_500.png'
+import SPSS_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/SPSS-Blue_500.png'
+import Python_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Python-Blue_500.png'
+
+import Powerbi_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/Power_bi-Sky_500.png'
+import Excel_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/Excel-Sky_500.png'
+import R_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/R_BI-Sky_500.png'
+import SPSS_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/SPSS-Sky_500.png'
+import Python_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/Python-Sky_500.png'
+
+//Data Analysis & Modelling(DM)
+import Daxdm_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Dax_DM-Blue_500.png'
+import Pq_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Power_Querry-Blue_500.png'
+import Etl_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/ETL-Blue_500.png'
+import DataWH_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Data_Warehousing-Blue_500.png'
+
+import Daxdm_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/Dax-Sky_500.png'
+import Pq_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/Power_Querry-Sky_500.png'
+import Etl_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/ETL-Sky_500.png'
+import DataWH_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/Data_Warehousing-Sky_500.png'
+
+//Programming Languages(PL)
+import Daxpl_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/Dax-PL-Blue_500.png'
+import Vba_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/VBA-Blue_500.png'
+import Rpl_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/R_PL-Blue_500.png'
+import Csharp_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/C Sharp-Blue_500.png'
+import Cpp_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/CPP-Blue_500.png'
+
+import Daxpl_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/Dax_PL-Sky_500.png'
+import Vba_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/VBA-Sky_500.png'
+import Rpl_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/R_PL-Sky_500.png'
+import Csharp_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/C_Sharp-Sky_500.png'
+import Cpp_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/CPP-Sky_500.png'
+
+//Database Softwares(DB)
+import Mysql_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Mysql_DB-Blue_500.png'
+import Mdb_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Mongo_DB-Blue_500.png'
+import Odb_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Oracale_DB-Blue_500.png'
+import Mss_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/MC_sql_server-Blue_500.png'
+
+import Mysql_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Mysql_DB-Sky_500.png'
+import Mdb_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Mongo_DB-Sky_500.png'
+import Odb_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Oracale_DB-Sky_500.png'
+import Mss_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/MC_sql_server-Sky_500.png'
+//=======================================================================
+
 
 
 
@@ -66,26 +107,36 @@ const Skills = ( {darkMode}) => {
             {name: 'Oracle DB', icon: Ooracle, level: 90, color: '#c94634'},
             {name: 'Microsoft SQL', icon: Mmcsqlserver, level: 90, color: '#b71c1c'},
         ];
+    const skillsBI = [
+            {name: 'PowerBI', icon_Dark: Powerbi_Dark , icon_Light: Powerbi_Light ,level: 95, color: '#f2c811'},
+            {name: 'Excel', icon_Dark: Excel_Dark , icon_Light: Excel_Light ,level: 95, color: '#185c37'},
+            {name: 'R', icon_Dark: R_Dark , icon_Light: R_Light ,level: 90, color: '#2369bd'},
+            {name: 'SPSS', icon_Dark: SPSS_Dark , icon_Light: SPSS_Light ,level: 85, color: '#d50b38'},
+            {name: 'Python', icon_Dark: Python_Dark , icon_Light: Python_Light ,level: 85, color: '#264d6f'},
+    ];
+
+    const skillsDM = [
+            {name: 'Power BI DAX', icon_Dark: Daxdm_Dark , icon_Light: Daxdm_Light ,level: 95, color: '#cca300'},
+            {name: 'Power Querry', icon_Dark: Pq_Dark , icon_Light: Pq_Light ,level: 95, color: '#11676a'},
+            {name: 'ETL', icon_Dark: Etl_Dark , icon_Light: Etl_Light ,level: 90, color: '#00167a'},
+            {name: 'Data Wrhouse', icon_Dark: DataWH_Dark , icon_Light: DataWH_Light ,level: 90, color: '#7a0000'},
+        ];
+
+    const skillsPL = [
+            {name: 'DAX', icon_Dark: Daxpl_Dark , icon_Light: Daxpl_Light ,level: 95, color: '#f2c811'},
+            {name: 'VBA', icon_Dark: Vba_Dark , icon_Light: Vba_Light ,level: 95, color: '#782379'},
+            {name: 'R', icon_Dark: Rpl_Dark , icon_Light: Rpl_Light ,level: 90, color: '#2369bd'},
+            {name: 'C #', icon_Dark: Csharp_Dark , icon_Light: Csharp_Light ,level: 85, color: '#782379'},
+            {name: 'C++', icon_Dark: Cpp_Dark , icon_Light: Cpp_Light ,level: 85, color: '#004482'},
+        ];
     
+    const skillsDB = [
+            {name: 'My SQL', icon_Dark: Mysql_Dark , icon_Light: Mysql_Light ,level: 95, color: '#00758f'},
+            {name: 'Mongo DB', icon_Dark: Mdb_Dark , icon_Light: Mdb_Light ,level: 95, color: '#10aa50'},
+            {name: 'Oracle DB', icon_Dark: Odb_Dark , icon_Light: Odb_Light ,level: 90, color: '#c94634'},
+            {name: 'Microsoft SQL', icon_Dark: Mss_Dark , icon_Light: Mss_Light ,level: 90, color: '#b71c1c'},
+        ];
 
-    // const skills2 = [
-    //     {name: 'DAX', icon: Ddax, level: 95, color: 'from-yellow-300 to-amber-300'},
-    //     {name: 'VBA', icon: Vvba, level: 95, color: 'from-violet-500 to-purple-500'},
-    //     {name: 'C#', icon: Ccsharp, level: 90, color: 'from-purple-700 to-violet-700'},
-    //     {name: 'C++', icon: Ccplusplus, level: 90, color: 'from-blue-500 to-sky-500'},
-    //     {name: 'React', icon: Rreact, level: 85, color: 'from-cyan-500 to-blue-500'},
-    // ];
-
-    // const stats = [
-    //     {id: 1, name: 'Statistical modelling'},
-    //     {id: 2, name: 'Designs of Experiments (DOE)'},
-    //     {id: 3, name: 'Multivariate data analysis'},
-    //     {id: 4, name: 'Quality control tools'},
-    //     {id: 5, name: 'Operational research'},
-    //     {id: 6, name: 'Regression Analysis'},
-    //     {id: 7, name:  'Generalized Linear Model'},
-    //     {id: 8, name: 'Decision Trees'},
-    // ];
 
     const stats = [
                 {id: 1, name: 'Statistical modelling'}, {id: 2, name: 'Data Analytics'}, {id: 3, name: 'Biostatistics'}, {id: 4, name: 'Data Insights'}, {id: 5, name: 'Designs of Experiments (DOE)'}, 

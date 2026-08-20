@@ -60,7 +60,7 @@ const App = () => {
       <Education darkMode={darkMode}/>
       {/* <Sksss darkMode={darkMode}/> */}
       {/* <Ddkk darkMode={darkMode}/> */}
-      {/* <Skills darkMode={darkMode}/> */}
+      <Skills darkMode={darkMode}/>
       {/* <Ggg darkMode={darkMode}/> */}
       {/* <Project darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>

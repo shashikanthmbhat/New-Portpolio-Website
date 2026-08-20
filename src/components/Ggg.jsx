@@ -1,28 +1,28 @@
 //Business Inteligence (BI)
-import PpowerBI from '../assets/Skill_Icon/Logos_BI/powerbi.png'
-import Eexcel from '../assets/Skill_Icon/Logos_BI/excel.png'
-import Rr from '../assets/Skill_Icon/Logos_BI/r.png'
-import Sspss from '../assets/Skill_Icon/Logos_BI/spss.png'
-import Ppython from '../assets/Skill_Icon/Logos_BI/python.png'
+import PpowerBI from '../assets/Skill_Icon/Old/Logos_BI/powerbi.png'
+import Eexcel from '../assets/Skill_Icon/Old/Logos_BI/excel.png'
+import Rr from '../assets/Skill_Icon/Old/Logos_BI/r.png'
+import Sspss from '../assets/Skill_Icon/Old/Logos_BI/spss.png'
+import Ppython from '../assets/Skill_Icon/Old/Logos_BI/python.png'
 
 //Data Analysis & Modelling(DM)
-import Ddax from  '../assets/Skill_Icon/Logos_DM/dax.png'
-import Eetl from  '../assets/Skill_Icon/Logos_DM/etl.png'
-import Ppowerquerry from  '../assets/Skill_Icon/Logos_DM/powerquerry.png'
-import Wwarehousing from  '../assets/Skill_Icon/Logos_DM/Warehousing.png'
+import Ddax from  '../assets/Skill_Icon/Old/Logos_DM/dax.png'
+import Eetl from  '../assets/Skill_Icon/Old/Logos_DM/etl.png'
+import Ppowerquerry from  '../assets/Skill_Icon/Old/Logos_DM/powerquerry.png'
+import Wwarehousing from  '../assets/Skill_Icon/Old/Logos_DM/Warehousing.png'
 
 //Programming Languages(PL)
-import Vvba from '../assets/Skill_Icon/Logos_PL/vba.png'
-import Pdax from '../assets/Skill_Icon/Logos_PL/dax.png'
-import Rrpl from '../assets/Skill_Icon/Logos_PL/r.png'
-import Ccsharp from '../assets/Skill_Icon/Logos_PL/csharp.png'
-import Ccplusplus from '../assets/Skill_Icon/Logos_PL/cplusplus.png'
+import Vvba from '../assets/Skill_Icon/Old/Logos_PL/vba.png'
+import Pdax from '../assets/Skill_Icon/Old/Logos_PL/dax.png'
+import Rrpl from '../assets/Skill_Icon/Old/Logos_PL/r.png'
+import Ccsharp from '../assets/Skill_Icon/Old/Logos_PL/csharp.png'
+import Ccplusplus from '../assets/Skill_Icon/Old/Logos_PL/cplusplus.png'
 
 //Database Softwares(DB)
-import Mmysql from  '../assets/Skill_Icon/Logos_DB/mysql.png'
-import Mmongodb from  '../assets/Skill_Icon/Logos_DB/mongodb.png'
-import Ooracle from  '../assets/Skill_Icon/Logos_DB/oracle.png'
-import Mmcsqlserver from  '../assets/Skill_Icon/Logos_DB/mcsqlserver.png'
+import Mmysql from  '../assets/Skill_Icon/Old/Logos_DB/mysql.png'
+import Mmongodb from  '../assets/Skill_Icon/Old/Logos_DB/mongodb.png'
+import Ooracle from  '../assets/Skill_Icon/Old/Logos_DB/oracle.png'
+import Mmcsqlserver from  '../assets/Skill_Icon/Old/Logos_DB/mcsqlserver.png'
 
 
 const Ggg = ( {darkMode}) => {
