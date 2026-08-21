@@ -57,13 +57,13 @@ const Education = ( {darkMode}) => {
   return (
     <section 
     id='education'
-    className='py-14 relative overflow-hidden'>
-        <div className='py-14 relative overflow-hidden'>
-            <div className='container px-5 py-14 mx-auto'>
-                <div className='text-center mb-20' data-aos='fade-up'>
+    className='py-1 relative overflow-hidden'>
+        <div className='py-10 relative overflow-hidden'>
+            <div className='container px-5 py-10 mx-auto'>
+                <div className='text-center mb-5' data-aos='fade-up'>
                 
-                    {/* Headding : Work Expirience */}
-                    <h1 className='sm:text-4xl text-3xl font-bold title-font mb-4'
+                    {/* Headding : Education */}
+                    <h1 className='sm:text-4xl text-3xl font-bold title-font mb-2'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
                         {headerEdu.title1} <span style={{
                             background: 'linear-gradient(to right, #3b82f6, #06d6b4)',
@@ -88,7 +88,7 @@ const Education = ( {darkMode}) => {
                   data-aos='fade-left'>
                   {/* Education Heading*/}
                   <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
-                      <h1 className='font-bold title-font mb-4'
+                      <h1 className='font-bold title-font mb-2'
                       style={{color: darkMode ? 'white' : 'black'}}>
                           Education Details
                       </h1>
@@ -157,7 +157,7 @@ const Education = ( {darkMode}) => {
                   data-aos='fade-left'>
                   {/* Cirtification Heading*/}
                   <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
-                      <h1 className='font-bold title-font mb-4'
+                      <h1 className='font-bold title-font mb-2'
                       style={{color: darkMode ? 'white' : 'black'}}>
                           Cirtification Details
                       </h1>
@@ -166,7 +166,7 @@ const Education = ( {darkMode}) => {
                   {/* ======================== Start ================================== */}
                   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6'>
                       {certifications.map((cert) => (
-                          <div key={cert.id} data-aos='zoom-in'
+                          <div key={cert.id}
                           className={`group relative border p-6 rounded-2xl transition-all duration-300 
                             ${darkMode 
                                  ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 

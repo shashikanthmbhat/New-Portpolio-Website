@@ -48,10 +48,10 @@ const Expirience = ( {darkMode}) => {
   return (
     <section 
     id='expirience'
-    className='py-14 relative overflow-hidden'>
-        <div className='py-14 relative overflow-hidden'>
-            <div className='container px-5 py-14 mx-auto'>
-                <div className='text-center mb-20' data-aos='fade-up'>
+    className='py-1 relative overflow-hidden'>
+        <div className='py-10 relative overflow-hidden'>
+            <div className='container px-5 py-10 mx-auto'>
+                <div className='text-center mb-10' data-aos='fade-up'>
                 
                     {/* Headding : Work Expirience */}
                     <h1 className='sm:text-4xl text-3xl font-bold title-font mb-4'

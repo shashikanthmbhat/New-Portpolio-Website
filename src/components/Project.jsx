@@ -390,6 +390,7 @@ const Project = ({ darkMode }) => {
             id: 1,
             title: 'Hospital Dashboard',
             desc: 'A comprehensive, production-ready Power BI solution for modern healthcare analytics & clinical insights.',
+            toshow: 'yes',
             images: [Pproject11, Pproject12, Pproject13, Pproject14, Pproject15, Pproject16],
             tags: ['PowerBI', 'DAX', 'Copilot', 'ai', 'hospital', 'cloudstorage', 'machinelearning', 'dashboard', 'data-analysys', 'vba'],
             githubLink : 'https://github.com/shashikanthmbhat/Hospial-Dashboard'
@@ -399,6 +400,7 @@ const Project = ({ darkMode }) => {
             title: 'Supply Chain Dashboard',
             desc: 'Comprehensive analysis of critical key performance indicators (KPIs) to drive strategic operational oversight',
             images: [Pproject21, Pproject22, Pproject23, Pproject24, Pproject25, Pproject26],
+            toshow: 'yes',
             tags: ['PowerBI', 'DAX', 'Copilot','supply-chain', 'data-analysys', 'business-intelligence', 'dashboard', 'vba', 'machinelearning'],
             githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         },
@@ -406,6 +408,7 @@ const Project = ({ darkMode }) => {
             id: 3,
             title: 'Appointment Visual Dashboard',
             desc: 'Interactive, calendar-style meeting view inside Power BI using new Card visual',
+            toshow: 'yes',
             images: [Pproject31, Pproject32],
             tags: ['PowerBI', 'DAX', 'Copilot', 'csv', 'dax-expression', 'dax-querry', 'hranalytics', 'election2024'],
             githubLink : 'https://github.com/shashikanthmbhat/Appointment_Visual'
@@ -414,6 +417,7 @@ const Project = ({ darkMode }) => {
             id: 4,
             title: 'Election Result Analysis Dashboard',
             desc: 'Dashboard on deep dive analysis on results of Indian General Election 2024',
+            toshow: 'no',
             images: [Pproject41, Pproject42, Pproject43, Pproject44],
             tags: ['PowerBI', 'DAX', 'Copilot', 'dataanalysis', 'cloudstorage', 'dataengineering', 'datavisualization', 'election2024', 'excel'],
             githubLink : 'https://github.com/shashikanthmbhat/Election_Result_Analysis'
@@ -422,6 +426,7 @@ const Project = ({ darkMode }) => {
             id: 5,
             title: 'Banking Analytics Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
+            toshow: 'no',
             images: [Pproject51, Pproject52, Pproject53, Pproject54],
             tags: ['PowerBI', 'DAX', 'Copilot'],
             githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
@@ -430,6 +435,7 @@ const Project = ({ darkMode }) => {
             id: 6,
             title: 'Sales Overview Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
+            toshow: 'no',
             images: [Pproject61, Pproject62, Pproject63, Pproject64],
             tags: ['PowerBI', 'DAX', 'Copilot'],
             githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
@@ -502,15 +508,10 @@ const Project = ({ darkMode }) => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12'>
 
                         {projects.map((project, index) => (
-                            <div
-                                key={project.id}
+                            <div key={project.id}
                                 style={{
-                                    background: darkMode
-                                        ? 'linear-gradient(to right, #1f2937, #111827)'
-                                        : 'linear-gradient(to right, #06b6d4, #ffffff)',
-                                    borderColor: darkMode
-                                        ? '#374151'
-                                        : '#e5e7eb'
+                                    background: darkMode ? 'linear-gradient(to right, #1f2937, #111827)' : 'linear-gradient(to right, #06b6d4, #ffffff)',
+                                    borderColor: darkMode ? '#374151' : '#e5e7eb'
                                 }}
                                 className='group rounded-xl border duration-300 hover:border-blue-500/50 transition-all'
                                 data-aos='fade-up'
@@ -521,8 +522,7 @@ const Project = ({ darkMode }) => {
                                 <ProjectSlideshow
                                     images={project.images}
                                     title={project.title}
-                                    onImageClick={(imageIndex) =>
-                                        openPopup(project, imageIndex)
+                                    onImageClick={(imageIndex) => openPopup(project, imageIndex)
                                     }
                                 />
 

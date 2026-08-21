@@ -1,38 +1,9 @@
-
-//Business Inteligence (BI)
-import PpowerBI from '../assets/Skill_Icon/Old/Logos_BI/powerbi.png'
-import Eexcel from '../assets/Skill_Icon/Old/Logos_BI/excel.png'
-import Rr from '../assets/Skill_Icon/Old/Logos_BI/r.png'
-import Sspss from '../assets/Skill_Icon/Old/Logos_BI/spss.png'
-import Ppython from '../assets/Skill_Icon/Old/Logos_BI/python.png'
-
-//Data Analysis & Modelling(DM)
-import Ddax from  '../assets/Skill_Icon/Old/Logos_DM/dax.png'
-import Eetl from  '../assets/Skill_Icon/Old/Logos_DM/etl.png'
-import Ppowerquerry from  '../assets/Skill_Icon/Old/Logos_DM/powerquerry.png'
-import Wwarehousing from  '../assets/Skill_Icon/Old/Logos_DM/Warehousing.png'
-
-//Programming Languages(PL)
-import Vvba from '../assets/Skill_Icon/Old/Logos_PL/vba.png'
-import Pdax from '../assets/Skill_Icon/Old/Logos_PL/dax.png'
-import Rrpl from '../assets/Skill_Icon/Old/Logos_PL/r.png'
-import Ccsharp from '../assets/Skill_Icon/Old/Logos_PL/csharp.png'
-import Ccplusplus from '../assets/Skill_Icon/Old/Logos_PL/cplusplus.png'
-
-//Database Softwares(DB)
-import Mmysql from  '../assets/Skill_Icon/Old/Logos_DB/mysql.png'
-import Mmongodb from  '../assets/Skill_Icon/Old/Logos_DB/mongodb.png'
-import Ooracle from  '../assets/Skill_Icon/Old/Logos_DB/oracle.png'
-import Mmcsqlserver from  '../assets/Skill_Icon/Old/Logos_DB/mcsqlserver.png'
-
-//=======================================================================
 //Business Inteligence (BI)
 import Powerbi_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Power_bi-Blue_500.png'
 import Excel_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Excel-Blue_500.png'
 import R_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/R_BI-Blue_500.png'
 import SPSS_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/SPSS-Blue_500.png'
 import Python_Dark from  '../assets/Skill_Icon/Blue-500/Logos_BI/Python-Blue_500.png'
-
 import Powerbi_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/Power_bi-Sky_500.png'
 import Excel_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/Excel-Sky_500.png'
 import R_Light from  '../assets/Skill_Icon/Sky-500/Logos_BI/R_BI-Sky_500.png'
@@ -44,7 +15,6 @@ import Daxdm_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Dax_DM-Blue_500.
 import Pq_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Power_Querry-Blue_500.png'
 import Etl_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/ETL-Blue_500.png'
 import DataWH_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DM/Data_Warehousing-Blue_500.png'
-
 import Daxdm_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/Dax-Sky_500.png'
 import Pq_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/Power_Querry-Sky_500.png'
 import Etl_Light from  '../assets/Skill_Icon/Sky-500/Logos_DM/ETL-Sky_500.png'
@@ -56,7 +26,6 @@ import Vba_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/VBA-Blue_500.png'
 import Rpl_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/R_PL-Blue_500.png'
 import Csharp_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/C Sharp-Blue_500.png'
 import Cpp_Dark from  '../assets/Skill_Icon/Blue-500/Logos_PL/CPP-Blue_500.png'
-
 import Daxpl_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/Dax_PL-Sky_500.png'
 import Vba_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/VBA-Sky_500.png'
 import Rpl_Light from  '../assets/Skill_Icon/Sky-500/Logos_PL/R_PL-Sky_500.png'
@@ -68,45 +37,13 @@ import Mysql_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Mysql_DB-Blue_50
 import Mdb_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Mongo_DB-Blue_500.png'
 import Odb_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/Oracale_DB-Blue_500.png'
 import Mss_Dark from  '../assets/Skill_Icon/Blue-500/Logos_DB/MC_sql_server-Blue_500.png'
-
 import Mysql_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Mysql_DB-Sky_500.png'
 import Mdb_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Mongo_DB-Sky_500.png'
 import Odb_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/Oracale_DB-Sky_500.png'
 import Mss_Light from  '../assets/Skill_Icon/Sky-500/Logos_DB/MC_sql_server-Sky_500.png'
-//=======================================================================
-
-
-
+import { head } from 'framer-motion/client'
 
 const Skills = ( {darkMode}) => {
-    const skills1 = [
-        {name: 'PowerBI', icon: PpowerBI, level: 95, color: '#f2c811'},
-        {name: 'Excel', icon: Eexcel, level: 95, color: '#185c37'},
-        {name: 'R', icon: Rr, level: 90, color: '#2369bd'},
-        {name: 'SPSS', icon: Sspss, level: 85, color: '#d50b38'},
-        {name: 'Python', icon: Ppython, level: 85, color: '#264d6f'},
-    ];
-
-    const skills2 = [
-            {name: 'Power BI DAX', icon: Ddax, level: 95, color: '#cca300'},
-            {name: 'Power Querry', icon: Ppowerquerry, level: 95, color: '#11676a'},
-            {name: 'ETL', icon: Eetl, level: 90, color: '#00167a'},
-            {name: 'Data Wrhouse', icon: Wwarehousing, level: 90, color: '#7a0000'},
-        ];
-    const skills3 = [
-            {name: 'DAX', icon: Pdax, level: 95, color: '#f2c811'},
-            {name: 'VBA', icon: Vvba, level: 95, color: '#782379'},
-            {name: 'R', icon: Rrpl, level: 90, color: '#2369bd'},
-            {name: 'C #', icon: Ccsharp, level: 85, color: '#782379'},
-            {name: 'C++', icon: Ccplusplus, level: 85, color: '#004482'},
-        ];
-    
-    const skills4 = [
-            {name: 'My SQL', icon: Mmysql, level: 95, color: '#00758f'},
-            {name: 'Mongo DB', icon: Mmongodb, level: 95, color: '#10aa50'},
-            {name: 'Oracle DB', icon: Ooracle, level: 90, color: '#c94634'},
-            {name: 'Microsoft SQL', icon: Mmcsqlserver, level: 90, color: '#b71c1c'},
-        ];
     const skillsBI = [
             {name: 'PowerBI', icon_Dark: Powerbi_Dark , icon_Light: Powerbi_Light ,level: 95, color: '#f2c811'},
             {name: 'Excel', icon_Dark: Excel_Dark , icon_Light: Excel_Light ,level: 95, color: '#185c37'},
@@ -137,45 +74,52 @@ const Skills = ( {darkMode}) => {
             {name: 'Microsoft SQL', icon_Dark: Mss_Dark , icon_Light: Mss_Light ,level: 90, color: '#b71c1c'},
         ];
 
-
     const stats = [
-                {id: 1, name: 'Statistical modelling'}, {id: 2, name: 'Data Analytics'}, {id: 3, name: 'Biostatistics'}, {id: 4, name: 'Data Insights'}, {id: 5, name: 'Designs of Experiments (DOE)'}, 
-                {id: 6, name: 'Multivariate data analysis'}, {id: 7, name: 'Quality control tools'}, {id: 8, name: 'Operational research'}, {id: 9, name: 'Regression Analysis'}, {id: 10, name: 'Generalized Linear Model'}, 
-                {id: 11, name: 'Decision Trees'}, {id: 12, name: 'Econometrics'}, {id: 13, name: 'Psychometrics'}, {id: 14, name: 'Research Methodology'}, {id: 15, name: 'Data Science'}, 
-                {id: 16, name: 'Machine Learning'}, {id: 17, name: 'Artificial Intelligence'}, {id: 18, name: 'Big Data Analytics'}, {id: 19, name: 'Deep Learning'}, {id: 20, name: 'Predictive Analytics'}, 
-                {id: 21, name: 'Data Mining'}, {id: 22, name: 'Natural Language Processing (NLP)'}, {id: 23, name: 'Supervised Learning.'}, {id: 24, name: 'Unsupervised Learning'}, {id: 25, name: 'Reinforcement Learning'}, 
-                {id: 26, name: 'Classification Algorithms'}, {id: 27, name: 'Clustering Techniques'}, {id: 28, name: 'Ensemble Methods'}, 
-            ]; 
+                {id: 1, name: 'Statistical modelling'}, {id: 2, name: 'Data Analytics'}, {id: 3, name: 'Biostatistics'}, {id: 4, name: 'Data Insights'}, {id: 5, name: 'Designs of Experiments (DOE)'}, {id: 6, name: 'Decision Trees'},
+                {id: 7, name: 'Quality control tools'}, {id: 8, name: 'Multivariate data analysis'}, {id: 9, name: 'Operational research'}, {id: 10, name: 'Regression Analysis'}, {id: 11, name: 'Clustering Techniques'},
+                {id: 12, name: 'Generalized Linear Model'}, {id: 13, name: 'Research Methodology'}, {id: 14, name: 'Artificial Intelligence'}, {id: 15, name: 'Econometrics'}, {id: 16, name: 'Psychometric'}, {id: 17, name: 'Sampling'},
+                {id: 18, name: 'Data Science'}, {id: 19, name: 'Classification Algorithms'}, {id: 20, name: 'Predictive Analytic'}, {id: 21, name: 'Machine Learning'}, {id: 22, name: 'Data Mining'}, {id: 23, name: 'Bigdata Analytics'},
+                {id: 24, name: 'Natural Language Processing (NLP)'}, {id: 25, name: 'Supervised Learning.'}, {id: 26, name: 'LPP'}, {id: 27, name: 'Unsupervised Learning'}, {id: 28, name: 'Reinforcement Learning'},
+                {id: 29, name: 'Deep Learning'}, {id: 30, name: 'Ensemble Methods'}, {id: 31, name: 'ARIMA'}, {id: 32, name: 'Stochastic Optimization'}, {id: 33, name: 'Dynamic Programming'}, {id: 34, name: 'Queueing Theory'},  
+            ];
+
+    const headerSkills= {
+    title1: 'My',
+    title2: 'Skills',
+    description: 'A specialized toolkit of modern frameworks, languages, and cloud technologies leveraged to build scalable, high-performance web applications'
+    };
+
 
   return (
     <section 
     id='skills'
-    className='py-14 relative overflow-hidden'>
-        <div className='py-14 relative overflow-hidden'>
-            <div className='container px-5 py-14 mx-auto'>
-                <div className='text-center mb-20' data-aos='fade-up'>
+    className='py-1 relative overflow-hidden'>
+        <div className='py-10 relative overflow-hidden'>
+            <div className='container px-5 py-10 mx-auto'>
+                <div className='text-center mb-10' data-aos='fade-up'>
 
                     {/* Headding : My Skills */}
                     <h1 className='sm:text-4xl text-3xl font-bold title-font mb-4'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
-                        My <span style={{
+                        {headerSkills.title1} <span style={{
                             background: 'linear-gradient(to right, #3b82f6, #06d6b4)',
                             WebkitBackgroundClip: 'text',
                             backgroundClip: 'text',
                             color: 'transparent'
                             }}>
-                                Skills
+                                {headerSkills.title2}
                             </span>
                     </h1>
 
                     {/* Discription - My Skills */}
                     <p className='text-lg max-w-2xl mx-auto leading-relaxed'
                     style={{ color: darkMode ? '#d1d5db' : '#4b5563'}}>
-                        A specialized toolkit of modern frameworks, languages, and cloud technologies leveraged to build scalable, high-performance web applications
+                        {headerSkills.description}
                     </p>
                 </div>
 
-                {/* My Skill set 1 Heading*/}
+                {/*================================= Business Inteligence (BI) ==================================*/}
+                {/* Heading */}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
@@ -183,65 +127,60 @@ const Skills = ( {darkMode}) => {
                     </h1>
                 </div>
                 
-                {/* My Skill set 1 */}
+                {/* My Skill set BI */}
                 <div className='flex flex-wrap -m-4'
                     data-aos='fade-up'
                     data-aos-delay='200'>
-                        {skills1.map((skill1, index1) =>(
+                        {skillsBI.map((skillbi, index1) =>(
                             <div
                         key={index1}
                         className='p-4 lg:w-1/5 md:w-1/2 w-full'
                         data-aos='fade-up'
                         data-aos-delay={`${300 + index1 * 100}`}>
-                            <div
-                            style={{
-                                background: darkMode
-                                ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                                : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-                                borderColor: darkMode ? '#374151' : '#e5e7eb'
-                            }}
-                            className='h-full p-6 rounded-2xl border hover:border-blue-500/50 transition-all hover:translate--y-2 group duration-300 hover:shadow-[0_0_30px_rgb(59, 130, 240,0.15)]'>
-                                <div className='flex items-center mb-6'>
-                                    <div style={{
-                                        background: darkMode
-                                         ? 'linear-gradient(to bottom right, #374151, #1f2937)'
-                                        : 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)',
-                                         }}
-                                        className='w-16 h-16 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                                        <img src={skill1.icon}
-                                            alt={skill1.name}
+                            {/* Background */}
+                            <div className={`h-full p-6 rounded-2xl border transition-all hover:translate--y-2 group duration-300
+                                ${darkMode 
+                                    ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                    : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                }`}>
+                                {/* Icon & Name */}
+                                <div className='flex items-center mb-4'>
+                                    {/* Icon */}
+                                    <div 
+                                        className='w-20 h-20 rounded-xl p-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                                        <img src={darkMode ? skillbi.icon_Dark : skillbi.icon_Light}
+                                            alt={skillbi.name}
                                             className='w-full h-full object-contain '/>
                                     </div>
+                                    {/* Name */}
                                     <h3 className='text-xl font-bold ml-4'
                                         style={{color: darkMode ? 'white' : '#1f2937'}}>
-                                        {skill1.name}
+                                        {skillbi.name}
                                     </h3>
                                 </div>
+
+                                {/* Proficiency Level */}
                                 <div className='mb-2 flex justify-between items-center '>
                                     <span className='font-medium'
-                                    style={{
-                                        color: darkMode ? '#dad5db' : '#6b7280'
-                                        }}>
+                                        style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                                             Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
+                                    </span>
+                                    <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
                                             WebkitBackgroundClip:'text',
                                             backgroundClip: 'text',
                                             color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                                            {skill1.level}%
-                                        </span>
+                                    }}
+                                    className='font-bold'>
+                                            {skillbi.level}%
+                                    </span>
                                 </div>
+                                {/* Proficiency Bar */}
                                 <div className='w-full rounded-full h-2 overflow-hidden'
-                                style={{
-                                    backgroundColor: darkMode ? '#374151' : '#e5e7eb'
-                                        }}>
-                                            <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
-                                            style={{ 
-                                                backgroundColor: skill1.color,
-                                                width: `${skill1.level}%`}}>
-                                            </div>
+                                    style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
+                                    <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
+                                        style={{ backgroundColor: darkMode ? '#3b82f6' : '#0ea5e9',
+                                                width: `${skillbi.level}%`}}>
+                                    </div>
                                 </div>
                                 <div className={`mt-6 pt-4 border-t
                                     ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
@@ -253,76 +192,72 @@ const Skills = ( {darkMode}) => {
                         </div>
                     ))}
                 </div>
+                {/*================================= (BI) (End) ==================================*/}
                 <br/>
-                
 
-                {/* =======================Skill Set 2======================================= */}
-                {/* My Skill set 2 Heading*/}
+                {/*================================= Data Analysis & Modelling (DM) ==================================*/}
+                {/* Heading */}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
                         Data Analysis & Modelling Tools :
                     </h1>
                 </div>
-
-                {/* My Skill Set-2 */}
-                <div className='flex flex-wrap -m-4 mt-2'
+                
+                {/* My Skill set DM */}
+                <div className='flex flex-wrap -m-4'
                     data-aos='fade-up'
                     data-aos-delay='200'>
-                        {skills2.map((skill2, index2) =>(
+                        {skillsDM.map((skilldm, index2) =>(
                             <div
                         key={index2}
                         className='p-4 lg:w-1/5 md:w-1/2 w-full'
                         data-aos='fade-up'
                         data-aos-delay={`${300 + index2 * 100}`}>
-                            <div
-                            style={{
-                                background: darkMode
-                                ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                                : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-                                borderColor: darkMode ? '#374151' : '#e5e7eb'
-                            }}
-                            className='h-full p-6 rounded-2xl border hover:border-blue-500/50 transition-all hover:translate--y-2 group duration-300 hover:shadow-[0_0_30px_rgb(59, 130, 246,0.15)]'>
-                                <div className='flex items-center mb-6'>
-                                    <div style={{
-                                        background: darkMode
-                                         ? 'linear-gradient(to bottom right, #374151, #1f2937)'
-                                        : 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)',
-                                         }}
-                                        className='w-16 h-16 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                                        <img src={skill2.icon}
-                                            alt={skill2.name}
-                                            className='w-full h-full object-contain'/>
+                            {/* Background */}
+                            <div className={`h-full p-6 rounded-2xl border transition-all hover:translate--y-2 group duration-300
+                                ${darkMode 
+                                    ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                    : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                }`}>
+                                {/* Icon & Name */}
+                                <div className='flex items-center mb-4'>
+                                    {/* Icon */}
+                                    <div 
+                                        className='w-20 h-20 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                                        <img src={darkMode ? skilldm.icon_Dark : skilldm.icon_Light}
+                                            alt={skilldm.name}
+                                            className='w-full h-full object-contain '/>
                                     </div>
+                                    {/* Name */}
                                     <h3 className='text-xl font-bold ml-4'
                                         style={{color: darkMode ? 'white' : '#1f2937'}}>
-                                        {skill2.name}
+                                        {skilldm.name}
                                     </h3>
                                 </div>
+
+                                {/* Proficiency Level */}
                                 <div className='mb-2 flex justify-between items-center '>
                                     <span className='font-medium'
-                                    style={{
-                                        color: darkMode ? '#dad5db' : '#6b7280'
-                                        }}>
+                                        style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                                             Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6d4)',
+                                    </span>
+                                    <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
                                             WebkitBackgroundClip:'text',
                                             backgroundClip: 'text',
                                             color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                                            {skill2.level}%
-                                        </span>
+                                    }}
+                                    className='font-bold'>
+                                            {skilldm.level}%
+                                    </span>
                                 </div>
+                                {/* Proficiency Bar */}
                                 <div className='w-full rounded-full h-2 overflow-hidden'
-                                style={{
-                                    backgroundColor: darkMode ? '#374151' : '#e5e7eb'
-                                        }}>
-                                            <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
-                                            style={{ backgroundColor: skill2.color,
-                                            width: `${skill2.level}%`}}>
-                                            </div>
+                                    style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
+                                    <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
+                                        style={{ backgroundColor: darkMode ? '#3b82f6' : '#0ea5e9',
+                                                width: `${skilldm.level}%`}}>
+                                    </div>
                                 </div>
                                 <div className={`mt-6 pt-4 border-t
                                     ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
@@ -334,75 +269,72 @@ const Skills = ( {darkMode}) => {
                         </div>
                     ))}
                 </div>
+                {/*================================= (DM) (End) ==================================*/}
                 <br/>
-
-                {/* ======================= Skill Set 3 ======================================= */}
-                {/* My Skill set 3 Heading*/}
+                
+                {/*================================= Programming Languages (PL) ==================================*/}
+                {/* Heading */}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
                         Programming Languages Tools :
                     </h1>
                 </div>
-
-                {/* My Skill Set-3 */}
-                <div className='flex flex-wrap -m-4 mt-2'
+                
+                {/* My Skill set PL */}
+                <div className='flex flex-wrap -m-4'
                     data-aos='fade-up'
                     data-aos-delay='200'>
-                        {skills3.map((skill3, index3) =>(
+                        {skillsPL.map((skillpl, index3) =>(
                             <div
                         key={index3}
                         className='p-4 lg:w-1/5 md:w-1/2 w-full'
                         data-aos='fade-up'
                         data-aos-delay={`${300 + index3 * 100}`}>
-                            <div
-                            style={{
-                                background: darkMode
-                                ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                                : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-                                borderColor: darkMode ? '#374151' : '#e5e7eb'
-                            }}
-                            className='h-full p-6 rounded-2xl border hover:border-blue-500/50 transition-all hover:translate--y-2 group duration-300 hover:shadow-[0_0_30px_rgb(59, 130, 246,0.15)]'>
-                                <div className='flex items-center mb-6'>
-                                    <div style={{
-                                        background: darkMode
-                                         ? 'linear-gradient(to bottom right, #374151, #1f2937)'
-                                        : 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)',
-                                         }}
-                                        className='w-16 h-16 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                                        <img src={skill3.icon}
-                                            alt={skill3.name}
-                                            className='w-full h-full object-contain'/>
+                            {/* Background */}
+                            <div className={`h-full p-6 rounded-2xl border transition-all hover:translate--y-2 group duration-300
+                                ${darkMode 
+                                    ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                    : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                }`}>
+                                {/* Icon & Name */}
+                                <div className='flex items-center mb-4'>
+                                    {/* Icon */}
+                                    <div 
+                                        className='w-20 h-20 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                                        <img src={darkMode ? skillpl.icon_Dark : skillpl.icon_Light}
+                                            alt={skillpl.name}
+                                            className='w-full h-full object-contain '/>
                                     </div>
+                                    {/* Name */}
                                     <h3 className='text-xl font-bold ml-4'
                                         style={{color: darkMode ? 'white' : '#1f2937'}}>
-                                        {skill3.name}
+                                        {skillpl.name}
                                     </h3>
                                 </div>
+
+                                {/* Proficiency Level */}
                                 <div className='mb-2 flex justify-between items-center '>
                                     <span className='font-medium'
-                                    style={{
-                                        color: darkMode ? '#dad5db' : '#6b7280'
-                                        }}>
+                                        style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                                             Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6d4)',
+                                    </span>
+                                    <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
                                             WebkitBackgroundClip:'text',
                                             backgroundClip: 'text',
                                             color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                                            {skill3.level}%
-                                        </span>
+                                    }}
+                                    className='font-bold'>
+                                            {skillpl.level}%
+                                    </span>
                                 </div>
+                                {/* Proficiency Bar */}
                                 <div className='w-full rounded-full h-2 overflow-hidden'
-                                style={{
-                                    backgroundColor: darkMode ? '#374151' : '#e5e7eb'
-                                        }}>
-                                            <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
-                                            style={{ backgroundColor: skill3.color,
-                                            width: `${skill3.level}%`}}>
-                                            </div>
+                                    style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
+                                    <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
+                                        style={{ backgroundColor: darkMode ? '#3b82f6' : '#0ea5e9',
+                                                width: `${skillpl.level}%`}}>
+                                    </div>
                                 </div>
                                 <div className={`mt-6 pt-4 border-t
                                     ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
@@ -414,75 +346,72 @@ const Skills = ( {darkMode}) => {
                         </div>
                     ))}
                 </div>
+                {/*================================= (PL) (End) ==================================*/}
                 <br/>
 
-                {/* ======================= Skill Set 4 ======================================= */}
-                {/* My Skill set 4 Heading*/}
+                {/*================================= Database Softwares (DB) ==================================*/}
+                {/* Heading */}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
                     style={{color: darkMode ? 'white' : '#1f3927'}}>
                         Database Softwares Tools :
                     </h1>
                 </div>
-
-                {/* My Skill Set-4 */}
-                <div className='flex flex-wrap -m-4 mt-2'
+                
+                {/* My Skill set DB */}
+                <div className='flex flex-wrap -m-4'
                     data-aos='fade-up'
                     data-aos-delay='200'>
-                        {skills4.map((skill4, index4) =>(
+                        {skillsDB.map((skilldb, index4) =>(
                             <div
                         key={index4}
                         className='p-4 lg:w-1/5 md:w-1/2 w-full'
                         data-aos='fade-up'
                         data-aos-delay={`${300 + index4 * 100}`}>
-                            <div
-                            style={{
-                                background: darkMode
-                                ? 'linear-gradient(to bottom right, #1f2937, #111827)'
-                                : 'linear-gradient(to bottom right, #ffffff, #f3f4f6)',
-                                borderColor: darkMode ? '#374151' : '#e5e7eb'
-                            }}
-                            className='h-full p-6 rounded-2xl border hover:border-blue-500/50 transition-all hover:translate--y-2 group duration-300 hover:shadow-[0_0_30px_rgb(59, 130, 246,0.15)]'>
-                                <div className='flex items-center mb-6'>
-                                    <div style={{
-                                        background: darkMode
-                                         ? 'linear-gradient(to bottom right, #374151, #1f2937)'
-                                        : 'linear-gradient(to bottom right, #f3f4f6, #e5e7eb)',
-                                         }}
-                                        className='w-16 h-16 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
-                                        <img src={skill4.icon}
-                                            alt={skill4.name}
-                                            className='w-full h-full object-contain'/>
+                            {/* Background */}
+                            <div className={`h-full p-6 rounded-2xl border transition-all hover:translate--y-2 group duration-300
+                                ${darkMode 
+                                    ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                    : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                }`}>
+                                {/* Icon & Name */}
+                                <div className='flex items-center mb-4'>
+                                    {/* Icon */}
+                                    <div 
+                                        className='w-20 h-20 rounded-xl p-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
+                                        <img src={darkMode ? skilldb.icon_Dark : skilldb.icon_Light}
+                                            alt={skilldb.name}
+                                            className='w-full h-full object-contain '/>
                                     </div>
+                                    {/* Name */}
                                     <h3 className='text-xl font-bold ml-4'
                                         style={{color: darkMode ? 'white' : '#1f2937'}}>
-                                        {skill4.name}
+                                        {skilldb.name}
                                     </h3>
                                 </div>
+
+                                {/* Proficiency Level */}
                                 <div className='mb-2 flex justify-between items-center '>
                                     <span className='font-medium'
-                                    style={{
-                                        color: darkMode ? '#dad5db' : '#6b7280'
-                                        }}>
+                                        style={{color: darkMode ? '#9ca3af' : '#1f2937'}}>
                                             Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6d4)',
+                                    </span>
+                                    <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)',
                                             WebkitBackgroundClip:'text',
                                             backgroundClip: 'text',
                                             color: 'transparent'
-                                        }}
-                                        className='font-bold'>
-                                            {skill4.level}%
-                                        </span>
+                                    }}
+                                    className='font-bold'>
+                                            {skilldb.level}%
+                                    </span>
                                 </div>
+                                {/* Proficiency Bar */}
                                 <div className='w-full rounded-full h-2 overflow-hidden'
-                                style={{
-                                    backgroundColor: darkMode ? '#374151' : '#e5e7eb'
-                                        }}>
-                                            <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
-                                            style={{ backgroundColor: skill4.color,
-                                            width: `${skill4.level}%`}}>
-                                            </div>
+                                    style={{backgroundColor: darkMode ? '#374151' : '#e5e7eb'}}>
+                                    <div className={`h-full rounded-full transition-all duration-1000 ease-out`}
+                                        style={{ backgroundColor: darkMode ? '#3b82f6' : '#0ea5e9',
+                                                width: `${skilldb.level}%`}}>
+                                    </div>
                                 </div>
                                 <div className={`mt-6 pt-4 border-t
                                     ${darkMode ? 'border-gray-700' : 'border-gray-300'}`}>
@@ -494,8 +423,10 @@ const Skills = ( {darkMode}) => {
                         </div>
                     ))}
                 </div>
+                {/*================================= (DB) (End) ==================================*/}
                 <br/>
 
+                {/*================================= Statistical Skills ==================================*/}
                 {/* Statistical Skills Heading*/}
                 <div className='sm:text-2xl text-xl text-left mt-4 mb-4' data-aos='fade-up'>
                     <h1 className='font-bold title-font mb-4'
@@ -505,22 +436,29 @@ const Skills = ( {darkMode}) => {
                 </div>
 
                 {/* Statistical Skills*/}
-                <div className='flex flex-wrap gap-1.5 mb-4 items-stretch'>
-                    {stats.map((itm, idx) => (
-                        <span
-                            key={idx}
-                            style={{
-                                // backgroundColor: darkMode ? '#374151' : '#f3f4f6',
-                               border: darkMode ? '2px solid #3b82f6' : '2px solid #06b6d4',
-                                color: darkMode ? '#d1d5db' : '#4b5563'}}
-                            className='px-2 py-1 text-xl rounded-full'
-                            data-aos='fade-up'
-                            data-aos-delay='500'>
-                            {itm.name}
-                        </span>
-                    ))}
+                <div className='my-4' data-aos='fade-up' data-aos-delay='200'>
+                    {/* Background Card Wrapper */}
+                    <div className={`h-full p-6 rounded-2xl border transition-all duration-300 hover:-translate-y-2 group
+                        ${darkMode 
+                            ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                            : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                        }`}>
+                    
+                        {/* Active Tag Layout Container */}
+                        <div className="flex flex-wrap gap-x-1.5 gap-y-3">
+                            {stats.map((itm, idx) => (
+                                <span key={idx} data-aos='fade-up' data-aos-delay='500'
+                                    className={`px-3 py-1 text-xl rounded-full border-2 transition-all duration-200
+                                    ${darkMode
+                                        ? 'border-[#3b82f6] text-[#9ca3af] hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]'
+                                        : 'border-[#06b6d4] text-[#1f2937] hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                    }`}>
+                                    {itm.name}
+                                </span>
+                            ))}
+                        </div>    
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
