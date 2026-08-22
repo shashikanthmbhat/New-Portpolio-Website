@@ -64,7 +64,7 @@ const App = () => {
       {/* <Ggg darkMode={darkMode}/> */}
       <Project darkMode={darkMode}/>
       <Contact darkMode={darkMode}/>
-      {/* <Footer darkMode={darkMode}/>  */}
+      <Footer darkMode={darkMode}/> 
     </div>
   )
 }

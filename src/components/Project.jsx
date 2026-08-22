@@ -40,6 +40,7 @@ import Pproject62 from '../assets/Project_Imgs/Project_6/6_2.png'
 import Pproject63 from '../assets/Project_Imgs/Project_6/6_3.png'
 import Pproject64 from '../assets/Project_Imgs/Project_6/6_4.png'
 
+
 // ============================================================
 // Project Slideshow Component
 // ============================================================
@@ -59,6 +60,7 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
         return () => clearInterval(timer)
     }, [images.length])
 
+
     // Previous slide
     const handlePrev = (e) => {
         e.preventDefault()
@@ -68,6 +70,7 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
             prev === 0 ? images.length - 1 : prev - 1
         )
     }
+
 
     // Next slide
     const handleNext = (e) => {
@@ -79,13 +82,15 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
         )
     }
 
+
     // Open popup
     const handleImageClick = () => {
         onImageClick(currentIndex)
     }
 
+
     return (
-        <div className='relative h-52 w-full overflow-hidden rounded-t-xl bg-gray-900 group/slider'>
+        <div className='relative h-52 w-[96%] mx-auto mt-2 rounded-sm overflow-hidden bg-gray-900 group/slider'>
 
             {/* Slideshow */}
             <AnimatePresence mode='wait'>
@@ -105,12 +110,14 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
                 />
             </AnimatePresence>
 
+
             {/* Click to view indicator */}
             <div className='absolute top-3 right-3 pointer-events-none opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300'>
                 <div className='bg-black/60 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-sm'>
                     Click to view
                 </div>
             </div>
+
 
             {/* Previous Arrow */}
             {images.length > 1 && (
@@ -124,6 +131,7 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
                 </button>
             )}
 
+
             {/* Next Arrow */}
             {images.length > 1 && (
                 <button
@@ -136,9 +144,11 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
                 </button>
             )}
 
+
             {/* Navigation Dots */}
             {images.length > 1 && (
                 <div className='absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10'>
+
                     {images.map((_, idx) => (
                         <button
                             key={idx}
@@ -150,32 +160,29 @@ const ProjectSlideshow = ({ images, title, onImageClick }) => {
                             className={`h-1.5 rounded-full transition-all duration-300 ${
                                 currentIndex === idx
                                     ? 'bg-blue-500 w-4'
-                                    : 'bg-white/50 w-1.5'
+                                    : 'bg-gray-700 w-1.5'
                             }`}
                             aria-label={`Go to slide ${idx + 1}`}
                             type='button'
                         />
                     ))}
+
                 </div>
             )}
+
         </div>
     )
 }
+// =================================== End Of Project Slide Show Component==================================
 
 
 // ============================================================
 // Popup / Lightbox Slideshow Component
 // ============================================================
-const ProjectPopup = ({
-    project,
-    currentIndex,
-    setCurrentIndex,
-    onClose
-}) => {
-
-    // Automatic popup slideshow
-    useEffect(() => {
-        if (!project || project.images.length <= 1) return
+const ProjectPopup = ({project, currentIndex, setCurrentIndex, onClose }) => {
+// Automatic popup slideshow
+useEffect(() => {
+    if (!project || project.images.length <= 1) return
 
         const timer = setInterval(() => {
             setCurrentIndex((prev) =>
@@ -186,11 +193,13 @@ const ProjectPopup = ({
         return () => clearInterval(timer)
     }, [project, setCurrentIndex])
 
-    // Close popup with Escape key
+
+    // Keyboard controls
     useEffect(() => {
         if (!project) return
 
         const handleKeyDown = (e) => {
+
             if (e.key === 'Escape') {
                 onClose()
             }
@@ -223,8 +232,11 @@ const ProjectPopup = ({
         }
     }, [project, onClose, setCurrentIndex])
 
+
     if (!project) return null
 
+
+    // Previous image
     const handlePrev = (e) => {
         e.stopPropagation()
 
@@ -235,6 +247,8 @@ const ProjectPopup = ({
         )
     }
 
+
+    // Next image
     const handleNext = (e) => {
         e.stopPropagation()
 
@@ -245,8 +259,10 @@ const ProjectPopup = ({
         )
     }
 
+
     return (
         <AnimatePresence>
+
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -258,9 +274,21 @@ const ProjectPopup = ({
 
                 {/* Popup Container */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    initial={{
+                        opacity: 0,
+                        scale: 0.9,
+                        y: 20
+                    }}
+                    animate={{
+                        opacity: 1,
+                        scale: 1,
+                        y: 0
+                    }}
+                    exit={{
+                        opacity: 0,
+                        scale: 0.9,
+                        y: 20
+                    }}
                     transition={{ duration: 0.3 }}
                     className='relative w-full max-w-6xl max-h-[90vh] flex flex-col items-center'
                     onClick={(e) => e.stopPropagation()}
@@ -268,7 +296,9 @@ const ProjectPopup = ({
 
                     {/* Header */}
                     <div className='w-full flex items-center justify-between mb-4 px-2'>
+
                         <div>
+
                             <h3 className='text-white text-lg sm:text-xl font-bold'>
                                 {project.title}
                             </h3>
@@ -276,7 +306,9 @@ const ProjectPopup = ({
                             <p className='text-gray-400 text-sm mt-1'>
                                 Image {currentIndex + 1} of {project.images.length}
                             </p>
+
                         </div>
+
 
                         {/* Close Button */}
                         <button
@@ -287,6 +319,7 @@ const ProjectPopup = ({
                         >
                             <FaTimes className='text-lg' />
                         </button>
+
                     </div>
 
 
@@ -305,8 +338,10 @@ const ProjectPopup = ({
                             </button>
                         )}
 
+
                         {/* Image */}
                         <AnimatePresence mode='wait'>
+
                             <motion.img
                                 key={currentIndex}
                                 src={project.images[currentIndex]}
@@ -328,7 +363,9 @@ const ProjectPopup = ({
                                 }}
                                 className='max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl select-none'
                             />
+
                         </AnimatePresence>
+
 
                         {/* Next Button */}
                         {project.images.length > 1 && (
@@ -341,12 +378,14 @@ const ProjectPopup = ({
                                 <FaChevronRight className='text-lg sm:text-xl' />
                             </button>
                         )}
+
                     </div>
 
 
                     {/* Popup Navigation Dots */}
                     {project.images.length > 1 && (
                         <div className='flex items-center justify-center gap-2 mt-5'>
+
                             {project.images.map((_, idx) => (
                                 <button
                                     key={idx}
@@ -360,8 +399,10 @@ const ProjectPopup = ({
                                     }`}
                                 />
                             ))}
+
                         </div>
                     )}
+
 
                     {/* Instructions */}
                     <div className='mt-4 text-gray-400 text-xs text-center'>
@@ -369,14 +410,16 @@ const ProjectPopup = ({
                     </div>
 
                 </motion.div>
+
             </motion.div>
+
         </AnimatePresence>
     )
 }
 
 
 // ============================================================
-// Main Project Component
+// Main Project Section
 // ============================================================
 const Project = ({ darkMode }) => {
 
@@ -384,89 +427,211 @@ const Project = ({ darkMode }) => {
     const [selectedProject, setSelectedProject] = useState(null)
     const [popupImageIndex, setPopupImageIndex] = useState(0)
 
-    // Project data
+    // Show all projects state
+    const [showAll, setShowAll] = useState(false)
+
     const projects = [
+
         {
             id: 1,
             title: 'Hospital Dashboard',
             desc: 'A comprehensive, production-ready Power BI solution for modern healthcare analytics & clinical insights.',
             toshow: 'yes',
-            images: [Pproject11, Pproject12, Pproject13, Pproject14, Pproject15, Pproject16],
-            tags: ['PowerBI', 'DAX', 'Copilot', 'ai', 'hospital', 'cloudstorage', 'machinelearning', 'dashboard', 'data-analysys', 'vba'],
-            githubLink : 'https://github.com/shashikanthmbhat/Hospial-Dashboard'
+            images: [
+                Pproject11,
+                Pproject12,
+                Pproject13,
+                Pproject14,
+                Pproject15,
+                Pproject16
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot',
+                'ai',
+                'hospital',
+                'cloudstorage',
+                'machinelearning',
+                'dashboard',
+                'data-analysys',
+                'vba'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Hospial-Dashboard'
         },
+
+
         {
             id: 2,
             title: 'Supply Chain Dashboard',
             desc: 'Comprehensive analysis of critical key performance indicators (KPIs) to drive strategic operational oversight',
-            images: [Pproject21, Pproject22, Pproject23, Pproject24, Pproject25, Pproject26],
             toshow: 'yes',
-            tags: ['PowerBI', 'DAX', 'Copilot','supply-chain', 'data-analysys', 'business-intelligence', 'dashboard', 'vba', 'machinelearning'],
-            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
+            images: [
+                Pproject21,
+                Pproject22,
+                Pproject23,
+                Pproject24,
+                Pproject25,
+                Pproject26
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot',
+                'supply-chain',
+                'data-analysys',
+                'business-intelligence',
+                'dashboard',
+                'vba',
+                'machinelearning'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         },
+
+
         {
             id: 3,
             title: 'Appointment Visual Dashboard',
             desc: 'Interactive, calendar-style meeting view inside Power BI using new Card visual',
             toshow: 'yes',
-            images: [Pproject31, Pproject32],
-            tags: ['PowerBI', 'DAX', 'Copilot', 'csv', 'dax-expression', 'dax-querry', 'hranalytics', 'election2024'],
-            githubLink : 'https://github.com/shashikanthmbhat/Appointment_Visual'
+            images: [
+                Pproject31,
+                Pproject32
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot',
+                'csv',
+                'dax-expression',
+                'dax-querry',
+                'hranalytics',
+                'election2024'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Appointment_Visual'
         },
+
+
         {
             id: 4,
             title: 'Election Result Analysis Dashboard',
             desc: 'Dashboard on deep dive analysis on results of Indian General Election 2024',
             toshow: 'no',
-            images: [Pproject41, Pproject42, Pproject43, Pproject44],
-            tags: ['PowerBI', 'DAX', 'Copilot', 'dataanalysis', 'cloudstorage', 'dataengineering', 'datavisualization', 'election2024', 'excel'],
-            githubLink : 'https://github.com/shashikanthmbhat/Election_Result_Analysis'
+            images: [
+                Pproject41,
+                Pproject42,
+                Pproject43,
+                Pproject44
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot',
+                'dataanalysis',
+                'cloudstorage',
+                'dataengineering',
+                'datavisualization',
+                'election2024',
+                'excel'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Election_Result_Analysis'
         },
+
+
         {
             id: 5,
             title: 'Banking Analytics Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
             toshow: 'no',
-            images: [Pproject51, Pproject52, Pproject53, Pproject54],
-            tags: ['PowerBI', 'DAX', 'Copilot'],
-            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
+            images: [
+                Pproject51,
+                Pproject52,
+                Pproject53,
+                Pproject54
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         },
+
+
         {
             id: 6,
             title: 'Sales Overview Dashboard',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magni eiu',
             toshow: 'no',
-            images: [Pproject61, Pproject62, Pproject63, Pproject64],
-            tags: ['PowerBI', 'DAX', 'Copilot'],
-            githubLink : 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
+            images: [
+                Pproject61,
+                Pproject62,
+                Pproject63,
+                Pproject64
+            ],
+            tags: [
+                'PowerBI',
+                'DAX',
+                'Copilot'
+            ],
+            githubLink: 'https://github.com/shashikanthmbhat/Supply-Chain-Dashboard'
         }
+
     ]
 
+    const headerPj = {
+    title1: 'My',
+    title2: 'Projects',
+    description: 'a showcase of my recent Work'
+    };
 
-    // Open popup
+
+    // ============================= Open Popup ======================
     const openPopup = (project, imageIndex) => {
         setSelectedProject(project)
         setPopupImageIndex(imageIndex)
     }
 
-
-    // Close popup
+    // ==================== Close Popup =============================
     const closePopup = () => {
         setSelectedProject(null)
         setPopupImageIndex(0)
     }
 
 
+    // ========================================================
+    // Filter Projects
+    //
+    // showAll = false
+    //     → only toshow: 'yes'
+    //
+    // showAll = true
+    //     → show every project
+    // ========================================================
+    const visibleProjects = projects.filter(
+        (project) =>
+            showAll || project.toshow === 'yes'
+    )
+
+
     return (
         <>
+
+            {/* ======================== PROJECT SECTION ====================== */}
+
             <section id='projects' className='relative py-24'>
+
                 <div className='container mx-auto px-4'>
 
-                    {/* Section Header */}
+                    {/* ==================================================
+                        Section Header
+                       ================================================== */}
+
                     <div
                         className='text-center mb-10'
                         data-aos='fade-up'
                     >
+
                         <h2
                             className='text-3xl sm:text-4xl font-bold mb-3'
                             style={{
@@ -475,21 +640,23 @@ const Project = ({ darkMode }) => {
                                     : '#1f2937'
                             }}
                         >
-                            My{' '}
+
+                            {headerPj.title1}
+
                             <span
                                 style={{
                                     background:
                                         'linear-gradient(to right, #3b82f6, #06b6d4)',
-                                    WebkitBackgroundClip:
-                                        'text',
-                                    backgroundClip:
-                                        'text',
+                                    WebkitBackgroundClip: 'text',
+                                    backgroundClip: 'text',
                                     color: 'transparent'
                                 }}
                             >
-                                Projects
+                                {headerPj.title2}
                             </span>
+
                         </h2>
+
 
                         <p
                             className='max-w-xl mx-auto'
@@ -499,35 +666,64 @@ const Project = ({ darkMode }) => {
                                     : '#6b7280'
                             }}
                         >
-                            a showcase of my recent Work
+                            {headerPj.description}
                         </p>
+
                     </div>
 
 
-                    {/* Project Grid */}
+                    {/* ==================================================
+                        Project Grid
+                       ================================================== */}
+
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12'>
 
-                        {projects.map((project, index) => (
-                            <div key={project.id}
-                                style={{
-                                    background: darkMode ? 'linear-gradient(to right, #1f2937, #111827)' : 'linear-gradient(to right, #06b6d4, #ffffff)',
-                                    borderColor: darkMode ? '#374151' : '#e5e7eb'
-                                }}
-                                className='group rounded-xl border duration-300 hover:border-blue-500/50 transition-all'
+                        {visibleProjects.map((project, index) => (
+
+                            <div
+                                key={project.id}
+                                // style={{
+                                //     background: darkMode
+                                //         ? 'linear-gradient(to right, #1f2937, #111827)'
+                                //         : 'linear-gradient(to right, #06b6d4, #ffffff)',
+                                //     borderColor: darkMode
+                                //         ? '#374151'
+                                //         : '#e5e7eb'
+                                // }}
+                                className={`group rounded-xl border duration-300 transition-all
+                                    ${darkMode 
+                                         ? 'bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]' 
+                                         : 'bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]'
+                                    }`}
                                 data-aos='fade-up'
                                 data-aos-delay={index * 100}
                             >
 
-                                {/* Slideshow */}
-                                <ProjectSlideshow
-                                    images={project.images}
-                                    title={project.title}
-                                    onImageClick={(imageIndex) => openPopup(project, imageIndex)
-                                    }
-                                />
+                                {/* ==================================================
+                                    Slideshow
+                                    2px padding creates inner spacing around image
+                                   ================================================== */}
+
+                                <div className='p-0.5'>
+
+                                    <ProjectSlideshow
+                                        images={project.images}
+                                        title={project.title}
+                                        onImageClick={(imageIndex) =>
+                                            openPopup(
+                                                project,
+                                                imageIndex
+                                            )
+                                        }
+                                    />
+
+                                </div>
 
 
-                                {/* Project Details */}
+                                {/* ==================================================
+                                    Project Details
+                                   ================================================== */}
+
                                 <div className='p-4'>
 
                                     <h3
@@ -546,37 +742,51 @@ const Project = ({ darkMode }) => {
                                         className='text-sm mb-3'
                                         style={{
                                             color: darkMode
-                                                ? '#d1d5db'
-                                                : '#6b7280'
+                                                ? '#9ca3af'
+                                                : '#1f2937'
                                         }}
                                     >
                                         {project.desc}
                                     </p>
 
 
-                                    {/* Project Tags */}
+                                    {/* ==================================================
+                                        Project Tags
+                                       ================================================== */}
+
                                     <div className='flex flex-wrap gap-1.5 mb-4'>
+
                                         {project.tags.map((tag, idx) => (
+
                                             <span
                                                 key={idx}
-                                                style={{
-                                                    backgroundColor:
-                                                        darkMode
-                                                            ? '#374151'
-                                                            : '#f3f4f6',
-                                                    color: darkMode
-                                                        ? '#d1d5db'
-                                                        : '#4b5563'
-                                                }}
-                                                className='px-2 py-1 text-xs rounded-full'
+                                                // style={{
+                                                //     backgroundColor:
+                                                //         darkMode
+                                                //             ? '#374151'
+                                                //             : '#f3f4f6',
+
+                                                //     color: darkMode
+                                                //         ? '#d1d5db'
+                                                //         : '#4b5563'
+                                                // }}
+                                                className={`px-2 py-1 text-xs rounded-full
+                                                    ${darkMode 
+                                                        ? 'bg-blue-500 text-white' 
+                                                        : 'bg-sky-300 text-black'}`}
                                             >
                                                 {tag}
                                             </span>
+
                                         ))}
+
                                     </div>
 
 
-                                    {/* Call to Action Links */}
+                                    {/* ==================================================
+                                        Call to Action Links
+                                       ================================================== */}
+
                                     <div className='flex gap-2'>
 
                                         {/* Github */}
@@ -592,22 +802,35 @@ const Project = ({ darkMode }) => {
                                             data-aos='zoom-in'
                                             data-aos-delay='400'
                                         >
+
                                             <FaGithub className='text-sm' />
+
                                             Github Link
+
                                         </a>
 
                                     </div>
+
                                 </div>
+
                             </div>
+
                         ))}
 
                     </div>
 
 
-                    {/* Global Footer Navigation Button */}
+                    {/* ==================================================
+                        View All / Show Featured Button
+                       ================================================== */}
+
                     <div className='text-center'>
-                        <a
-                            href='#'
+
+                        <button
+                            type='button'
+                            onClick={() =>
+                                setShowAll((prev) => !prev)
+                            }
                             style={{
                                 background:
                                     'linear-gradient(to right, #3b82f6, #06b6d4)'
@@ -616,26 +839,34 @@ const Project = ({ darkMode }) => {
                             data-aos='zoom-in'
                             data-aos-delay='400'
                         >
-                            View All Projects
-                        </a>
+
+                            {showAll
+                                ? 'Show Featured Projects'
+                                : 'View All Projects'}
+
+                        </button>
+
                     </div>
 
                 </div>
+
             </section>
 
 
-            {/* =====================================================
+            {/* ==================================================
                 PROJECT IMAGE POPUP
-               ===================================================== */}
+               ================================================== */}
+
             <ProjectPopup
                 project={selectedProject}
                 currentIndex={popupImageIndex}
                 setCurrentIndex={setPopupImageIndex}
                 onClose={closePopup}
             />
+
         </>
     )
 }
 
+
 export default Project
- 
