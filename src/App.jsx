@@ -3,18 +3,18 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import Header from "./components/Header"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Old/Navbar"
 import Hero from "./components/Hero"
 import About from "./components/About"
-import Skills from "./components/Skills"
+import Skills from "./components/Jsx_Files/Skills"
 import Project from "./components/Project"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Ggg from "./components/Ggg"
+import Contact from "./components/Jsx_Files/Contact"
+import Footer from "./components/Jsx_Files/Footer"
+import Ggg from "./components/Old/Ggg"
 import Expirience from "./components/Expirience"
-import Education from "./components/Education"
-import Sksss from "./components/sksss"
-import Ddkk from "./components/ddkk"
+import Education from "./components/Jsx_Files/Education"
+import Sksss from "./components/Old/Sksss"
+import Ddkk from "./components/Old/Ddkk"
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true)

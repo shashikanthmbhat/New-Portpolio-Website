@@ -79,9 +79,10 @@ useEffect(() => {
                                 <span>
                                     I Am  &nbsp;
                                 </span>
+                                {/* bg-[linear-gradient(to_right,#ef4444,#f59e0b,#10b981,#3b82f6,#8b5cf6)] */}
                                 <motion.span
-                                className='font-courgette-regular text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text bg-[linear-gradient(to_right,#ef4444,#f59e0b,#10b981,#3b82f6,#8b5cf6)] font-bold'
-                                transition={{ duration: 3, repeat: Infinity}}>
+                                className='text-3xl sm:text-4xl lg:text-5xl text-transparent bg-clip-text  font-bold bg-cyan-500 dark:bg-blue-500'
+                                transition={{ duration: 3, repeat: Infinity, }}>
                                     {text}
                                 </motion.span >
                             </motion.h1>
