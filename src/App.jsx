@@ -3,16 +3,17 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import Header from "./components/Header"
-import Navbar from "./components/Old/Navbar"
-import Hero from "./components/Hero"
-import About from "./components/About"
+import Hero from "./components/Jsx_Files/Hero"
+import About from "./components/Jsx_Files/About"
 import Skills from "./components/Jsx_Files/Skills"
 import Project from "./components/Project"
 import Contact from "./components/Jsx_Files/Contact"
 import Footer from "./components/Jsx_Files/Footer"
-import Ggg from "./components/Old/Ggg"
-import Expirience from "./components/Expirience"
+import Expirience from "./components/Jsx_Files/Expirience"
 import Education from "./components/Jsx_Files/Education"
+
+import Navbar from "./components/Old/Navbar"
+import Ggg from "./components/Old/Ggg"
 import Sksss from "./components/Old/Sksss"
 import Ddkk from "./components/Old/Ddkk"
 

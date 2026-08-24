@@ -18,6 +18,55 @@
    --font-Archivo-Narrow: "Archivo Narrow", sans-serif;
 }
 
+/* Styles For title */
+@utility style1-dark {
+    @apply sm:text-4xl text-3xl font-bold mb-4;
+    color: white;
+}
+
+@utility style1-light {
+    @apply sm:text-4xl text-3xl font-bold mb-4;
+    color: black;
+}
+@utility style2 {
+    background: linear-gradient(to right, #3b82f6, #06d6b4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Styles For Discription */
+@utility style-Disc-dark {
+    @apply text-lg max-w-2xl mx-auto leading-relaxed;
+    color: #d1d5db;
+}
+
+@utility style-Disc-light {
+    @apply text-lg max-w-2xl mx-auto leading-relaxed;
+    color: #4b5563;
+}
+
+/* Style for bg box */
+/* To be changed */
+.style-bg-dark {
+    @apply relative p-6 border rounded-2xl transition-all duration-300;
+    @apply bg-[#111a3e] border-transparent;
+    @apply hover:border-blue-500/50;
+}
+
+.style-bg-dark:hover {
+    box-shadow: 0 0 20px -5px rgba(6, 162, 194, 0.2);
+}
+
+.style-bg-light {
+    @apply relative p-6 border rounded-2xl transition-all duration-300;
+    @apply bg-[#c0e6fd] border-transparent;
+    @apply hover:border-sky-800/50;
+}
+
+.style-bg-light:hover {
+    box-shadow: 0 0 20px -5px rgba(82, 82, 91, 0.8);
+}
 
 body{
   font-family: "Josefin Sans", sans-serif;

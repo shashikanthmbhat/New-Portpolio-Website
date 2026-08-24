@@ -3,7 +3,7 @@
 // =====================================================
 
 export const headerEdu = {
-    title1: "My",
+    title1: "My ",
     title2: "Education",
     description:
         "I deliver impactful digital solutions by combining technical expertise with creative problem-solving. My professional journey features a proven track record of successful, high-quality projects.",

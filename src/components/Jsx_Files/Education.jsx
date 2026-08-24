@@ -34,42 +34,16 @@ const Education = ({ darkMode }) => {
                     >
 
                         {/* Heading : Education */}
-                        <h1
-                            className="sm:text-4xl text-3xl font-bold title-font mb-2"
-                            style={{
-                                color: darkMode
-                                    ? "white"
-                                    : "#1f3927",
-                            }}
-                        >
+                        <h1 className={darkMode ? "style1-dark" : "style1-light"}>
                             {headerEdu.title1}
-
-                            <span
-                                style={{
-                                    background:
-                                        "linear-gradient(to right, #3b82f6, #06d6b4)",
-                                    WebkitBackgroundClip: "text",
-                                    backgroundClip: "text",
-                                    color: "transparent",
-                                }}
-                            >
+                            <span className='style2'>
                                 {headerEdu.title2}
                             </span>
                         </h1>
-
-
                         {/* Description - Education */}
-                        <p
-                            className="text-lg max-w-2xl mx-auto leading-relaxed"
-                            style={{
-                                color: darkMode
-                                    ? "#d1d5db"
-                                    : "#4b5563",
-                            }}
-                        >
+                        <p className={darkMode ? "style-Disc-dark" : "style-Disc-light"}>
                             {headerEdu.description}
                         </p>
-
                     </div>
 
 
@@ -112,20 +86,10 @@ const Education = ({ darkMode }) => {
 
                                 <div
                                     key={edu.id}
-                                    className={`group relative p-6 border rounded-2xl transition-all duration-300
-                                    ${
-                                        darkMode
-                                            ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                            : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                                    }`}
-                                >
-
+                                    className={`group ${darkMode ? 'style-bg-dark' : 'style-bg-light'}`}>
                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-
-
                                         {/* Graduation Cap + Degree + College */}
                                         <div className="flex items-center gap-3">
-
                                             {/* Graduation Cap */}
                                             <div
                                                 className={`p-2 rounded-lg border-transparent transition-colors group-hover:rotate-12
@@ -283,13 +247,7 @@ const Education = ({ darkMode }) => {
 
                                     <div
                                         key={cert.id}
-                                        className={`group relative border p-6 rounded-2xl transition-all duration-300
-                                        ${
-                                            darkMode
-                                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                                        }`}
-                                    >
+                                        className={`group ${darkMode ? 'style-bg-dark' : 'style-bg-light'}`}>
 
                                         {/* Award Icon */}
                                         <div
