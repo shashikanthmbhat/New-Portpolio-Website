@@ -86,7 +86,8 @@ const Education = ({ darkMode }) => {
 
                                 <div
                                     key={edu.id}
-                                    className={`group ${darkMode ? 'style-bg-dark' : 'style-bg-light'}`}>
+                                    className={`group relative p-6 border rounded-2xl ${
+                                        darkMode ? 'style-bg-dark' : 'style-bg-light' }`}>
                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
                                         {/* Graduation Cap + Degree + College */}
                                         <div className="flex items-center gap-3">
@@ -247,7 +248,8 @@ const Education = ({ darkMode }) => {
 
                                     <div
                                         key={cert.id}
-                                        className={`group ${darkMode ? 'style-bg-dark' : 'style-bg-light'}`}>
+                                        className={`group relative p-6 border rounded-2xl ${
+                                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}>
 
                                         {/* Award Icon */}
                                         <div

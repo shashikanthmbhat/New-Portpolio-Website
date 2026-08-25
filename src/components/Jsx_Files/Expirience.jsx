@@ -51,7 +51,8 @@ const Expirience = ({ darkMode }) => {
 
                             <div
                                 key={exp.id}
-                                className={`group ${darkMode ? 'style-bg-dark' : 'style-bg-light'}`}>
+                                className={`group relative p-6 border rounded-2xl ${
+                                    darkMode ? 'style-bg-dark' : 'style-bg-light' }`}>
 
                                 {/* ==================================================
                                     TOP SECTION

@@ -47,27 +47,21 @@
 }
 
 /* Style for bg box */
-/* To be changed */
-.style-bg-dark {
-    @apply relative p-6 border rounded-2xl transition-all duration-300;
+@utility style-bg-dark {
     @apply bg-[#111a3e] border-transparent;
     @apply hover:border-blue-500/50;
+    @apply transition-all duration-300;
+    &:hover { box-shadow: 0 0 20px -5px rgba(6, 162, 194, 0.2);
+    }
 }
 
-.style-bg-dark:hover {
-    box-shadow: 0 0 20px -5px rgba(6, 162, 194, 0.2);
-}
-
-.style-bg-light {
-    @apply relative p-6 border rounded-2xl transition-all duration-300;
+@utility style-bg-light {
     @apply bg-[#c0e6fd] border-transparent;
     @apply hover:border-sky-800/50;
+    @apply transition-all duration-300;
+    &:hover { box-shadow: 0 0 20px -5px rgba(82, 82, 91, 0.8);
+    }
 }
-
-.style-bg-light:hover {
-    box-shadow: 0 0 20px -5px rgba(82, 82, 91, 0.8);
-}
-
 body{
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;

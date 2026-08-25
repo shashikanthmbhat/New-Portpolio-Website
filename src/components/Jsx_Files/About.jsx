@@ -70,37 +70,13 @@ const About = ({ darkMode }) => {
 
                     <header>
 
-                        <h1
-                            className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-transparent bg-linear-to-r from-blue-400 to-blue-600 bg-clip-text"
-                            style={{
-                                color: darkMode
-                                    ? "white"
-                                    : "#1f2937",
-                            }}
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                        >
-
+                        <h1 className={darkMode ? "style1-dark" : "style1-light"}>
                             {headerAboutMe.title1}
-
-                            <span
-                                style={{
-                                    background:
-                                        "linear-gradient(to right, #3b82f6,#06b6d4)",
-                                    WebkitBackgroundClip:
-                                        "text",
-                                    backgroundClip:
-                                        "text",
-                                    color: "transparent",
-                                }}
-                            >
+                            <span className='style2'>
                                 {headerAboutMe.title2}
                             </span>
-
                         </h1>
-
                     </header>
-
 
                     {/* ============================
                         DESCRIPTION
@@ -108,11 +84,7 @@ const About = ({ darkMode }) => {
 
                     <p
                         className={`text-sm sm:text-base border lg:text-lg text-justify mb-6 sm:mb-8 leading-relaxed p-4 sm:p-6 rounded-xl sm:rounded-2xl backdrop-blur-sm
-                        ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
+                        ${ darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
                         data-aos="fade-up"
                         data-aos-delay="500"
                     >

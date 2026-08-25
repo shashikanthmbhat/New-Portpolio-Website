@@ -255,7 +255,7 @@ export const stats = [
 // =====================================================
 
 export const headerSkills = {
-    title1: "My",
+    title1: "My ",
     title2: "Skills",
     description:
         "A specialized toolkit of modern frameworks, languages, and cloud technologies leveraged to build scalable, high-performance web applications",
