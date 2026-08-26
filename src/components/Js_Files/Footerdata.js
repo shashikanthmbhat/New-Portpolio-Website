@@ -1,12 +1,16 @@
+
 import { FaGithub, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { ChartBarIcon } from "@heroicons/react/24/solid"; 
 
-export const footerName = {
+import pbDark from "../../assets/Logo/PB-2-Dark.png";
+import pbLight from "../../assets/Logo/PB-2-Light.png";
+
+const footerName = {
     name: "Shashikanth Bhat",
     title: "Statistician & PowerBI Analyst",
 };
 
-export const footerSocialIcons = [
+const footerSocialIcons = [
     {
         id: 1,
         icon: FaGithub,
@@ -39,7 +43,7 @@ export const footerSocialIcons = [
     },
 ];
 
-export const footerInfo = [
+const footerInfo = [
     {
         id: 1,
         titleF: "Phone",
@@ -56,3 +60,11 @@ export const footerInfo = [
         val: "Shashikanthm Bhat",
     },
 ];
+
+export {
+    pbDark,
+    pbLight,
+    footerName,
+    footerSocialIcons,
+    footerInfo
+}

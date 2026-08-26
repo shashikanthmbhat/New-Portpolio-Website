@@ -1,9 +1,19 @@
-import { Moon, Sun, Menu, X, Dot } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBluesky } from "react-icons/fa6";
 
-import { navItems } from "../Js_Files/Headerdata";
+import { Moon,
+    Sun,
+    Menu,
+    X,
+    Dot,
+    FaBluesky,
+    logoDark,
+    logoLight,
+    nameDark,
+    nameLight,
+    navItems,
+    navItemsNew 
+              } from "../Js_Files/Headerdata";
 
 const Header = ({ darkMode, toggleDarkMode }) => {
     const [activeSection, setActiveSection] = useState("home");
@@ -50,11 +60,17 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                         }}
                         className="flex items-center space-x-2 shrink-0"
                     >
-                        <FaBluesky className="text-blue-500 text-xl" />
+                        <img
+                            src={darkMode ? logoDark : logoLight}
+                            alt="Logo"
+                            className="w-10 h-10" />
 
                         <span className="text-2xl font-bold text-blue-500 flex items-center">
-                            Shashi
-                            <Dot className="mt-1" />
+                            <img
+                            src={darkMode ? nameDark : nameLight}
+                            alt="Name"
+                            className="w-32.4 h-10" />
+                            
                         </span>
                     </a>
 

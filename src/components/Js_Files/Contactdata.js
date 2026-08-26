@@ -1,7 +1,7 @@
 import { FaWhatsapp, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 export const headerCt = {
-    title1: "Get In",
+    title1: "Get In ",
     title2: "Touch",
     description: "Lets work together on your next project",
 };
@@ -18,7 +18,7 @@ export const contactInfo = [
         id: 2,
         name: "WhatWhatsApp",
         icon: FaWhatsapp,
-        alt: "+91 9886226207",
+        alt: "+91 988 622 6207",
         href: "https://wa.me/919886226207",
     },
     {

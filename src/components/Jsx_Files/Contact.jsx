@@ -19,34 +19,13 @@ const Contact = ({ darkMode }) => {
                     data-aos="fade-up"
                 >
                     {/* Get In Touch text */}
-                    <h2
-                        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3"
-                        style={{
-                            color: darkMode ? "white" : "#1f2937",
-                        }}
-                    >
+                    <h2 className={darkMode ? "style1-dark" : "style1-light"}>
                         {headerCt.title1}
-
-                        <span
-                            style={{
-                                background:
-                                    "linear-gradient(to right, #3b82f6, #06d6b4)",
-                                WebkitBackgroundClip: "text",
-                                backgroundClip: "text",
-                                color: "transparent",
-                            }}
-                        >
-                            {" "}
+                        <span className='style2'>
                             {headerCt.title2}
                         </span>
                     </h2>
-
-                    <p
-                        className="text-base sm:text-lg md-text-xl"
-                        style={{
-                            color: darkMode ? "#d1d5db" : "#6b7280",
-                        }}
-                    >
+                    <p className={darkMode ? "style-Disc-dark" : "style-Disc-light"}>
                         {headerCt.description}
                     </p>
                 </div>

@@ -1,7 +1,9 @@
 import {
+    pbDark,
+    pbLight,
     footerName,
     footerSocialIcons,
-    footerInfo,
+    footerInfo
 } from "../Js_Files/Footerdata";
 
 const Footer = ({ darkMode }) => {
@@ -34,7 +36,7 @@ const Footer = ({ darkMode }) => {
                         <div className="mt-5">
 
                             {/* Heading */}
-                            <h4 className="text-lg font-bold mb-2"
+                            <h4 className="text-lg font-bold mb-2 lg:text-left sm:text-center"
                                 style={{ color: darkMode ? "white" : "black" }}>
                                 Follow Me:
                             </h4>
@@ -64,19 +66,10 @@ const Footer = ({ darkMode }) => {
 
                     {/* Right side */}
                     <div className="text-center flex flex-col items-center md:items-end gap-1">
-                        {footerInfo.map((info) => (
-                            <p key={info.id}
-                               className={`flex items-center justify-end gap-1 font-medium ${
-                                    darkMode ? "text-blue-500"  : "text-cyan-500" }`}>
-                                {info.titleF}
-
-                                <span className={`font-normal
-                                ${ darkMode ? "text-gray-500" : "text-gray-800" }`}>
-                                    {" : "}
-                                    {info.val}
-                                </span>
-                            </p>
-                        ))}
+                        <img
+                        src={darkMode ? pbDark : pbLight}
+                        alt="Shashi"
+                        className="h-20 w-62" />
                     </div>
                 </div>
             </div>
