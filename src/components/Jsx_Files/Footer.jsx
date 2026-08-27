@@ -33,8 +33,7 @@ const Footer = ({ darkMode }) => {
 
                     {/* Center side */}
                     <div className="flex gap-4">
-                        <div className="mt-5">
-
+                        <div className="mt-0">
                             {/* Heading */}
                             <h4 className="text-lg font-bold mb-2 lg:text-left sm:text-center"
                                 style={{ color: darkMode ? "white" : "black" }}>
@@ -56,7 +55,7 @@ const Footer = ({ darkMode }) => {
                                                     ? "text-blue-500 bg-blue-500/20 border-blue-500/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.7)]"
                                                     : "text-cyan-500 bg-cyan-500/20 border-cyan-500/40 hover:shadow-[0_0_40px_rgba(6,182,212,0.7)]"
                                             }`}>
-                                            <IconComponent className="w-7 h-7" />
+                                            <IconComponent className="w-5 h-5" />
                                         </a>
                                     );
                                 })}
@@ -69,7 +68,7 @@ const Footer = ({ darkMode }) => {
                         <img
                         src={darkMode ? pbDark : pbLight}
                         alt="Shashi"
-                        className="h-20 w-62" />
+                        className="h-15 w-46.5" />
                     </div>
                 </div>
             </div>

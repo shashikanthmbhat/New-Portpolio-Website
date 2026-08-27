@@ -4,9 +4,6 @@ import {
     GraduationCap,
     Award,
     ShieldCheck,
-} from "lucide-react";
-
-import {
     headerEdu,
     educationData,
     certifications,

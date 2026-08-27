@@ -1,8 +1,13 @@
-// =====================================================
-// Education Header
-// =====================================================
+// ===== Import Icons
+import {
+    Calendar,
+    CheckCircle,
+    GraduationCap,
+    Award,
+    ShieldCheck,
+} from "lucide-react";
 
-export const headerEdu = {
+const headerEdu = {
     title1: "My ",
     title2: "Education",
     description:
@@ -14,7 +19,7 @@ export const headerEdu = {
 // Education Data
 // =====================================================
 
-export const educationData = [
+const educationData = [
     {
         id: 1,
         degree: "Masters Of Science (M.Sc) (Statistics)",
@@ -39,7 +44,7 @@ export const educationData = [
 // Certifications Data
 // =====================================================
 
-export const certifications = [
+const certifications = [
     {
         id: 1,
         title: "Microsoft Power BI 2026-Complete Course-Beginner to Advanced",
@@ -60,3 +65,14 @@ export const certifications = [
             "Master foundational Python syntax, logic, and OOP to extract web data via APIs and scraping, utilizing Pandas, Numpy, and Jupyter.",
     },
 ];
+
+export {
+    Calendar,
+    CheckCircle,
+    GraduationCap,
+    Award,
+    ShieldCheck,
+    headerEdu,
+    educationData,
+    certifications,
+};

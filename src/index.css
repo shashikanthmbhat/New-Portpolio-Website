@@ -1,15 +1,16 @@
+/* Import - Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 
+/* Tailwind CSS */
 @import "tailwindcss";
-
-
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Fonts */
 @theme{
   --font-Josefin: "Josefin Sans", sans-serif;
   --font-Corinthia: "Corinthia", cursive;
@@ -59,9 +60,9 @@
     @apply bg-[#c0e6fd] border-transparent;
     @apply hover:border-sky-800/50;
     @apply transition-all duration-300;
-    &:hover { box-shadow: 0 0 20px -5px rgba(82, 82, 91, 0.8);
-    }
+    &:hover { box-shadow: 0 0 20px -5px rgba(82, 82, 91, 0.8);}
 }
+
 body{
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
@@ -70,14 +71,40 @@ body{
 
 
 
-.dark {
-  color-scheme: dark;
+.dark { color-scheme: dark; }
+html{ scroll-behavior: smooth; }
+
+
+/* Particle jsx */
+.particle-pop {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: particlePop 0.7s ease-out forwards;
 }
 
-html{
-  scroll-behavior: smooth;
+@keyframes particlePop {
+    0%  {
+          width: 10px;
+          height: 10px;
+          opacity: 0.8;
+        }
+
+    50% {
+          opacity: 0.4;
+        }
+
+    100% {
+          width: 120px;
+          height: 120px;
+          opacity: 0;
+        }
 }
 
+/* Extra */
 /* star */
 .star-shape {
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);

@@ -1,19 +1,9 @@
-// Expiriencedata.js
-
+// ===== ICONS =====
 import {
     BriefcaseIcon,
     Building,
     Calendar,
 } from "lucide-react";
-
-
-// ===== ICONS =====
-
-export const experienceIcons = {
-    BriefcaseIcon,
-    Building,
-    Calendar,
-};
 
 
 // ===== HEADER =====
@@ -93,5 +83,13 @@ export const Expiriences = [
             "Provided detailed interpretation of data and recommendations to optimize the future practice",
         ],
     },
-
 ];
+
+export const experienceIcons = {
+    BriefcaseIcon,
+    Building,
+    Calendar,
+};
+
+
+

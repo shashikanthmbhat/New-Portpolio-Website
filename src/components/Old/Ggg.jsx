@@ -118,7 +118,7 @@ const Ggg = ( {darkMode}) => {
                       {skillsBI.slice(0, 5).map((sklbi) => (
                         <div key={sklbi.id} className="group h-22.5">
                           <div className="flex items-center justify-between mb-2">
-                            <div className="flex items-center gap-3">
+                            <d iv className="flex items-center gap-3">
                               <div className="p-2 bg-[#111a3e] rounded-lg group-hover:bg-[#111a3e] transition-colors duration-300">
                                 <img
                                   src={sklbi.icon}
@@ -132,7 +132,7 @@ const Ggg = ( {darkMode}) => {
                                 style={{color: darkMode ? 'white' : '#1f2937'}}>
                                 {sklbi.name}
                               </span>
-                            </div>
+                            </d>
 
                             <span
                               className="font-bold"

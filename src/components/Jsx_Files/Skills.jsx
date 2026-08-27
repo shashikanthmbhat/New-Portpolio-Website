@@ -41,354 +41,554 @@ const Skills = ({ darkMode }) => {
                     </div>
 
 
-                    {/* =====================================================
-                        Business Intelligence
-                    ===================================================== */}
-                    <div
-                        className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
-                        data-aos="fade-up"
-                    >
-                        <h3
-                            className="text-xl sm:text-2xl font-bold mb-6"
-                            style={{
-                                color: darkMode ? "white" : "black",
-                            }}
-                        >
+                    {/* ========== Business Intelligence new ========== */}
+                    <div className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
+                            data-aos="fade-up">
+                    {/* Start of Page */}
+                        {/* Heading - BI */}
+                        <h3 className="text-xl sm:text-2xl font-bold mb-3"
+                            style={{color: darkMode ? "white" : "black",}}>
                             Business Intelligence Tools
                         </h3>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                             {skillsBI.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className={`group rounded-xl border p-4 transition-all duration-300 ${
-                                        darkMode
-                                            ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
-                                            : "bg-white border-gray-200 hover:border-sky-500/60"
-                                    }`}
-                                >
-                                    {/* Icon */}
-                                    <div className="flex justify-center mb-4">
-                                        <img
-                                            src={
-                                                darkMode
-                                                    ? skill.icon_Dark
-                                                    : skill.icon_Light
-                                            }
+                                <div key={skill.name}
+                                     className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                     darkMode
+                                        ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                        : "bg-white border-gray-200 hover:border-sky-500/60"
+                                    }`}>
+                                    <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                    {/* Left Column - Icon */}
+                                    <div className={`flex justify-center border-2 rounded-xl items-center
+                                        ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                            <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
                                             alt={skill.name}
-                                            className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        />
+                                            className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
                                     </div>
 
+                                    {/* Right Column - Skill Information */}
+                                    <div className="min-w-0">
                                     {/* Skill Name */}
-                                    <h4
-                                        className="text-center text-xl font-semibold mb-3"
-                                        style={{
-                                            color: darkMode
-                                                ? "white"
-                                                : "black",
-                                        }}
-                                    >
+                                    <h4 className="text-base font-semibold mb-1 truncate"
+                                        style={{color: darkMode ? "white" : "black"}}>
                                         {skill.name}
                                     </h4>
-                                    
+                                    {/* Proficiency & Percentage */}
+                                    <div className="flex justify-between items-center mb-1">
+                                        <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                            Proficiency
+                                        </span>
+                                        <span
+                                        className="text-sm"
+                                        style={{
+                                            background:
+                                            "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                            WebkitBackgroundClip: "text",
+                                            backgroundClip: "text",
+                                            color: "transparent",
+                                        }}>
+                                            {skill.level}%
+                                        </span>
+                                    </div>
 
                                     {/* Progress Bar */}
-                                    <div
-                                        className={`w-full h-2 rounded-full overflow-hidden ${
-                                            darkMode
-                                                ? "bg-gray-700"
-                                                : "bg-gray-200"
-                                        }`}
-                                    >
-                                        <div
-                                            className="h-full rounded-full transition-all duration-500"
-                                            style={{
-                                                width: `${skill.level}%`,
-                                                backgroundColor: darkMode ? '#0ea5e9' : '#06b6d4'
-                                            }}
-                                        />
-                                    </div>
-
-                                    {/* Proficieny & Percentage */}
-                                    <div className='mb-2 flex mt-3 justify-between items-center '>
-                                        <span className='font-medium'
-                                            style={{ color: darkMode ? 'white' : 'black'}}>
-                                                Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)', WebkitBackgroundClip:'text', backgroundClip: 'text', color: 'transparent'}}
-                                            className='font-bold'>
-                                            {skill.level}%
-                                        </span>
+                                    <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                         darkMode ? "bg-gray-700" : "bg-gray-200"
+                                        }`}>
+                                        <div className="h-full rounded-full transition-all duration-500"
+                                        style={{
+                                            width: `${skill.level}%`,
+                                            backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                        }} />
                                     </div>
                                 </div>
+                            </div>
+                            </div>
                             ))}
-                        </div>
-                    </div>
+                            </div>
 
-
-                    {/* =====================================================
-                        Data Analysis & Modelling
-                    ===================================================== */}
-                    <div
-                        className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
-                        data-aos="fade-up"
-                    >
-                        <h3
-                            className="text-xl sm:text-2xl font-bold mb-6"
-                            style={{
-                                color: darkMode ? "white" : "black",
-                            }}
-                        >
-                            Data Analysis & Modelling Tools
-                        </h3>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            {skillsDM.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className={`group rounded-xl border p-4 transition-all duration-300 ${
+                            {/* ========== Data Analysis & Modelling new ========== */}
+                            {/* Heading - DM */}
+                            <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                                style={{color: darkMode ? "white" : "black",}}>
+                                Data Analysis & Modelling Tools
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                {skillsDM.map((skill) => (
+                                    <div key={skill.name}
+                                        className={`group rounded-xl border p-3 transition-all duration-300 ${
                                         darkMode
                                             ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
                                             : "bg-white border-gray-200 hover:border-sky-500/60"
-                                    }`}
-                                >
-                                    <div className="flex justify-center mb-4">
-                                        <img
-                                            src={
-                                                darkMode
-                                                    ? skill.icon_Dark
-                                                    : skill.icon_Light
-                                            }
-                                            alt={skill.name}
-                                            className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        />
-                                    </div>
+                                        }`}>
+                                        <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                        {/* Left Column - Icon */}
+                                        <div className={`flex justify-center border-2 rounded-xl items-center
+                                            ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                                <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                                alt={skill.name}
+                                                className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
+                                        </div>
 
-                                    <h4
-                                        className="text-center text-xl font-semibold mb-3"
-                                        style={{
-                                            color: darkMode
-                                                ? "white"
-                                                : "black",
-                                        }}
-                                    >
-                                        {skill.name}
-                                    </h4>
-                                    
+                                        {/* Right Column - Skill Information */}
+                                        <div className="min-w-0">
+                                        {/* Skill Name */}
+                                        <h4 className="text-base font-semibold mb-1 truncate"
+                                            style={{color: darkMode ? "white" : "black"}}>
+                                            {skill.name}
+                                        </h4>
+                                        {/* Proficiency & Percentage */}
+                                        <div className="flex justify-between items-center mb-1">
+                                            <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                                Proficiency
+                                            </span>
+                                            <span
+                                            className="text-sm"
+                                            style={{
+                                                background:
+                                                "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                                WebkitBackgroundClip: "text",
+                                                backgroundClip: "text",
+                                                color: "transparent",
+                                            }}>
+                                                {skill.level}%
+                                            </span>
+                                        </div>
 
-                                    <div
-                                        className={`w-full h-2 rounded-full overflow-hidden ${
-                                            darkMode
-                                                ? "bg-gray-700"
-                                                : "bg-gray-200"
-                                        }`}
-                                    >
-                                        <div
-                                            className="h-full rounded-full transition-all duration-500"
+                                        {/* Progress Bar */}
+                                        <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                            darkMode ? "bg-gray-700" : "bg-gray-200"
+                                            }`}>
+                                            <div className="h-full rounded-full transition-all duration-500"
                                             style={{
                                                 width: `${skill.level}%`,
-                                                backgroundColor: darkMode ? '#0ea5e9' : '#06b6d4',
-                                            }}
-                                        />
-                                    </div>
-
-                                    {/* Proficieny & Percentage */}
-                                    <div className='mb-2 flex mt-3 justify-between items-center '>
-                                        <span className='font-medium'
-                                            style={{ color: darkMode ? 'white' : 'black'}}>
-                                                Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)', WebkitBackgroundClip:'text', backgroundClip: 'text', color: 'transparent'}}
-                                            className='font-bold'>
-                                            {skill.level}%
-                                        </span>
+                                                backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                            }} />
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                                </div>
+                                ))}
+                                </div>
+
+                                
+                    
+                    {/* End of Programming Skills */}
                     </div>
 
-
-                    {/* =====================================================
-                        Programming Languages
-                    ===================================================== */}
-                    <div
-                        className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
-                        data-aos="fade-up"
-                    >
-                        <h3
-                            className="text-xl sm:text-2xl font-bold mb-6"
-                            style={{
-                                color: darkMode ? "white" : "black",
-                            }}
-                        >
-                            Programming Languages
+                    {/* ========== Programming Languages new ========== */}
+                    <div className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
+                            data-aos="fade-up">
+                        {/* Start of Page */}
+                        
+                        {/* Heading - PL */}
+                        <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                            style={{color: darkMode ? "white" : "black",}}>
+                                Programming Languages Tools
                         </h3>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
                             {skillsPL.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className={`group rounded-xl border p-4 transition-all duration-300 ${
-                                        darkMode
-                                            ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
-                                            : "bg-white border-gray-200 hover:border-sky-500/60"
-                                    }`}
-                                >
-                                    <div className="flex justify-center mb-4">
-                                        <img
-                                            src={
-                                                darkMode
-                                                    ? skill.icon_Dark
-                                                    : skill.icon_Light
-                                            }
-                                            alt={skill.name}
-                                            className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        />
-                                    </div>
-
-                                    <h4
-                                        className="text-center font-semibold mb-3"
-                                        style={{
-                                            color: darkMode
-                                                ? "white"
-                                                : "black",
-                                        }}
-                                    >
-                                        {skill.name}
-                                    </h4>
-
-                                    <div
-                                        className={`w-full h-2 rounded-full overflow-hidden ${
-                                            darkMode
-                                                ? "bg-gray-700"
-                                                : "bg-gray-200"
-                                        }`}
-                                    >
-                                        <div
-                                            className="h-full rounded-full transition-all duration-500"
-                                            style={{
-                                                width: `${skill.level}%`,
-                                                backgroundColor: darkMode ? '#0ea5e9' : '#06b6d4',
-                                            }}
-                                        />
-                                    </div>
-
-                                    {/* Proficieny & Percentage */}
-                                    <div className='mb-2 flex mt-3 justify-between items-center '>
-                                        <span className='font-medium'
-                                            style={{ color: darkMode ? 'white' : 'black'}}>
-                                                Proficiency
-                                        </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)', WebkitBackgroundClip:'text', backgroundClip: 'text', color: 'transparent'}}
-                                            className='font-bold'>
-                                            {skill.level}%
-                                        </span>
-                                    </div>
+                            <div key={skill.name}
+                                className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                darkMode
+                                    ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                    : "bg-white border-gray-200 hover:border-sky-500/60"
+                                }`}>
+                                <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                {/* Left Column - Icon */}
+                                <div className={`flex justify-center border-2 rounded-xl items-center
+                                    ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                    <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                        alt={skill.name}
+                                        className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
                                 </div>
-                            ))}
+
+                                {/* Right Column - Skill Information */}
+                                <div className="min-w-0">
+                                {/* Skill Name */}
+                                <h4 className="text-base font-semibold mb-1 truncate"
+                                    style={{color: darkMode ? "white" : "black"}}>
+                                        {skill.name}
+                                </h4>
+                                {/* Proficiency & Percentage */}
+                                <iv className="flex justify-between items-center mb-1">
+                                <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                    Proficiency
+                                </span>
+                                <span
+                                    className="text-sm"
+                                    style={{background: "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                            WebkitBackgroundClip: "text",
+                                            backgroundClip: "text",
+                                            color: "transparent",
+                                            }}>
+                                                {skill.level}%
+                                            </span>
+                            </iv>
+
+                            {/* Progress Bar */}
+                            <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                darkMode ? "bg-gray-700" : "bg-gray-200"
+                            }`}>
+                                <div className="h-full rounded-full transition-all duration-500"
+                                    style={{width: `${skill.level}%`,
+                                            backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                    }} />
+                                </div>
                         </div>
                     </div>
+                </div>
+                ))}
+            </div>
 
+                                    {/* ========== Database Softwares new ========== */}
+                                    {/* Heading - PL */}
+                                    <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                                        style={{color: darkMode ? "white" : "black",}}>
+                                        Database Softwares Tools
+                                    </h3>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                        {skillsDB.map((skill) => (
+                                            <div key={skill.name}
+                                                className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                                darkMode
+                                                    ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                                    : "bg-white border-gray-200 hover:border-sky-500/60"
+                                                }`}>
+                                                <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                                {/* Left Column - Icon */}
+                                                <div className={`flex justify-center border-2 rounded-xl items-center
+                                                    ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                                        <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                                        alt={skill.name}
+                                                        className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
+                                                </div>
 
-                    {/* =====================================================
-                        Database Softwares
-                    ===================================================== */}
-                    <div
-                        className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
-                        data-aos="fade-up"
-                    >
-                        <h3
-                            className="text-xl sm:text-2xl font-bold mb-6"
-                            style={{
-                                color: darkMode ? "white" : "black",
-                            }}
-                        >
-                            Database Softwares
+                                                {/* Right Column - Skill Information */}
+                                                <div className="min-w-0">
+                                                {/* Skill Name */}
+                                                <h4 className="text-base font-semibold mb-1 truncate"
+                                                    style={{color: darkMode ? "white" : "black"}}>
+                                                    {skill.name}
+                                                </h4>
+                                                {/* Proficiency & Percentage */}
+                                                <div className="flex justify-between items-center mb-1">
+                                                    <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                                        Proficiency
+                                                    </span>
+                                                    <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        background:
+                                                        "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                                        WebkitBackgroundClip: "text",
+                                                        backgroundClip: "text",
+                                                        color: "transparent",
+                                                    }}>
+                                                        {skill.level}%
+                                                    </span>
+                                                </div>
+
+                                                {/* Progress Bar */}
+                                                <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                                    darkMode ? "bg-gray-700" : "bg-gray-200"
+                                                    }`}>
+                                                    <div className="h-full rounded-full transition-all duration-500"
+                                                    style={{
+                                                        width: `${skill.level}%`,
+                                                        backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                                    }} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        ))}
+                                        </div>
+                    </div>
+
+                    {/* ========== Business Intelligence new ========== */}
+                    <div className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
+                            data-aos="fade-up">
+                    {/* Start of Page */}
+                    </div>
+
+                    {/* ========== Business Intelligence new ========== */}
+                    <div className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
+                            data-aos="fade-up">
+                    {/* Start of Page */}
+                    </div>
+
+                    {/* ========== Business Intelligence new ========== */}
+                    <div className={`rounded-2xl border p-5 sm:p-6 mb-8 transition-all duration-300 ${
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
+                            data-aos="fade-up">
+                    {/* Start of Page */}
+                        {/* Heading - BI */}
+                        <h3 className="text-xl sm:text-2xl font-bold mb-3"
+                            style={{color: darkMode ? "white" : "black",}}>
+                            Business Intelligence Tools
                         </h3>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                            {skillsDB.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className={`group rounded-xl border p-4 transition-all duration-300 ${
-                                        darkMode
-                                            ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
-                                            : "bg-white border-gray-200 hover:border-sky-500/60"
-                                    }`}
-                                >
-                                    <div className="flex justify-center mb-4">
-                                        <img
-                                            src={
-                                                darkMode
-                                                    ? skill.icon_Dark
-                                                    : skill.icon_Light
-                                            }
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                            {skillsBI.map((skill) => (
+                                <div key={skill.name}
+                                     className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                     darkMode
+                                        ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                        : "bg-white border-gray-200 hover:border-sky-500/60"
+                                    }`}>
+                                    <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                    {/* Left Column - Icon */}
+                                    <div className={`flex justify-center border-2 rounded-xl items-center
+                                        ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                            <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
                                             alt={skill.name}
-                                            className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110"
-                                        />
+                                            className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
                                     </div>
 
-                                    <h4
-                                        className="text-center font-semibold mb-3"
-                                        style={{
-                                            color: darkMode
-                                                ? "white"
-                                                : "black",
-                                        }}
-                                    >
+                                    {/* Right Column - Skill Information */}
+                                    <div className="min-w-0">
+                                    {/* Skill Name */}
+                                    <h4 className="text-base font-semibold mb-1 truncate"
+                                        style={{color: darkMode ? "white" : "black"}}>
                                         {skill.name}
                                     </h4>
-
-                                    <div
-                                        className={`w-full h-2 rounded-full overflow-hidden ${
-                                            darkMode
-                                                ? "bg-gray-700"
-                                                : "bg-gray-200"
-                                        }`}
-                                    >
-                                        <div
-                                            className="h-full rounded-full transition-all duration-500"
-                                            style={{
-                                                width: `${skill.level}%`,
-                                                backgroundColor: darkMode ? '#0ea5e9' : '#06b6d4',
-                                            }}
-                                        />
-                                    </div>
-
-                                    {/* Proficieny & Percentage */}
-                                    <div className='mb-2 flex mt-3 justify-between items-center '>
-                                        <span className='font-medium'
-                                            style={{ color: darkMode ? 'white' : 'black'}}>
-                                                Proficiency
+                                    {/* Proficiency & Percentage */}
+                                    <div className="flex justify-between items-center mb-1">
+                                        <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                            Proficiency
                                         </span>
-                                        <span style={{background: 'linear-gradient(to right, #3b82f6, #06b6f4)', WebkitBackgroundClip:'text', backgroundClip: 'text', color: 'transparent'}}
-                                            className='font-bold'>
+                                        <span
+                                        className="text-sm"
+                                        style={{
+                                            background:
+                                            "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                            WebkitBackgroundClip: "text",
+                                            backgroundClip: "text",
+                                            color: "transparent",
+                                        }}>
                                             {skill.level}%
                                         </span>
                                     </div>
+
+                                    {/* Progress Bar */}
+                                    <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                         darkMode ? "bg-gray-700" : "bg-gray-200"
+                                        }`}>
+                                        <div className="h-full rounded-full transition-all duration-500"
+                                        style={{
+                                            width: `${skill.level}%`,
+                                            backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                        }} />
+                                    </div>
                                 </div>
+                            </div>
+                            </div>
                             ))}
-                        </div>
+                            </div>
+
+                            {/* ========== Data Analysis & Modelling new ========== */}
+                            {/* Heading - DM */}
+                            <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                                style={{color: darkMode ? "white" : "black",}}>
+                                Data Analysis & Modelling Tools
+                            </h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                {skillsDM.map((skill) => (
+                                    <div key={skill.name}
+                                        className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                        darkMode
+                                            ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                            : "bg-white border-gray-200 hover:border-sky-500/60"
+                                        }`}>
+                                        <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                        {/* Left Column - Icon */}
+                                        <div className={`flex justify-center border-2 rounded-xl items-center
+                                            ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                                <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                                alt={skill.name}
+                                                className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
+                                        </div>
+
+                                        {/* Right Column - Skill Information */}
+                                        <div className="min-w-0">
+                                        {/* Skill Name */}
+                                        <h4 className="text-base font-semibold mb-1 truncate"
+                                            style={{color: darkMode ? "white" : "black"}}>
+                                            {skill.name}
+                                        </h4>
+                                        {/* Proficiency & Percentage */}
+                                        <div className="flex justify-between items-center mb-1">
+                                            <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                                Proficiency
+                                            </span>
+                                            <span
+                                            className="text-sm"
+                                            style={{
+                                                background:
+                                                "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                                WebkitBackgroundClip: "text",
+                                                backgroundClip: "text",
+                                                color: "transparent",
+                                            }}>
+                                                {skill.level}%
+                                            </span>
+                                        </div>
+
+                                        {/* Progress Bar */}
+                                        <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                            darkMode ? "bg-gray-700" : "bg-gray-200"
+                                            }`}>
+                                            <div className="h-full rounded-full transition-all duration-500"
+                                            style={{
+                                                width: `${skill.level}%`,
+                                                backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                            }} />
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                ))}
+                                </div>
+
+                                {/* ========== Programming Languages new ========== */}
+                                {/* Heading - PL */}
+                                <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                                    style={{color: darkMode ? "white" : "black",}}>
+                                    Programming Languages Tools
+                                </h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                                    {skillsPL.map((skill) => (
+                                        <div key={skill.name}
+                                            className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                            darkMode
+                                                ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                                : "bg-white border-gray-200 hover:border-sky-500/60"
+                                            }`}>
+                                            <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                            {/* Left Column - Icon */}
+                                            <div className={`flex justify-center border-2 rounded-xl items-center
+                                                ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                                    <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                                    alt={skill.name}
+                                                    className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
+                                            </div>
+
+                                            {/* Right Column - Skill Information */}
+                                            <div className="min-w-0">
+                                            {/* Skill Name */}
+                                            <h4 className="text-base font-semibold mb-1 truncate"
+                                                style={{color: darkMode ? "white" : "black"}}>
+                                                {skill.name}
+                                            </h4>
+                                            {/* Proficiency & Percentage */}
+                                            <div className="flex justify-between items-center mb-1">
+                                                <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                                    Proficiency
+                                                </span>
+                                                <span
+                                                className="text-sm"
+                                                style={{
+                                                    background:
+                                                    "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                                    WebkitBackgroundClip: "text",
+                                                    backgroundClip: "text",
+                                                    color: "transparent",
+                                                }}>
+                                                    {skill.level}%
+                                                </span>
+                                            </div>
+
+                                            {/* Progress Bar */}
+                                            <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                                darkMode ? "bg-gray-700" : "bg-gray-200"
+                                                }`}>
+                                                <div className="h-full rounded-full transition-all duration-500"
+                                                style={{
+                                                    width: `${skill.level}%`,
+                                                    backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                                }} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    ))}
+                                    </div>
+
+                                    {/* ========== Database Softwares new ========== */}
+                                    {/* Heading - PL */}
+                                    <h3 className="text-xl mt-8 sm:text-2xl font-bold mb-4"
+                                        style={{color: darkMode ? "white" : "black",}}>
+                                        Database Softwares Tools
+                                    </h3>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                        {skillsDB.map((skill) => (
+                                            <div key={skill.name}
+                                                className={`group rounded-xl border p-3 transition-all duration-300 ${
+                                                darkMode
+                                                    ? "bg-[#0f182b] border-gray-700 hover:border-blue-500/60"
+                                                    : "bg-white border-gray-200 hover:border-sky-500/60"
+                                                }`}>
+                                                <div className="grid grid-cols-[60px_1fr] gap-2 items-center">
+                                                {/* Left Column - Icon */}
+                                                <div className={`flex justify-center border-2 rounded-xl items-center
+                                                    ${darkMode ? 'border-blue-500' : 'border-sky-500'}`}>
+                                                        <img src={darkMode ? skill.icon_Dark : skill.icon_Light}
+                                                        alt={skill.name}
+                                                        className="p-2 object-contain transition-transform duration-300 group-hover:scale-110" />
+                                                </div>
+
+                                                {/* Right Column - Skill Information */}
+                                                <div className="min-w-0">
+                                                {/* Skill Name */}
+                                                <h4 className="text-base font-semibold mb-1 truncate"
+                                                    style={{color: darkMode ? "white" : "black"}}>
+                                                    {skill.name}
+                                                </h4>
+                                                {/* Proficiency & Percentage */}
+                                                <div className="flex justify-between items-center mb-1">
+                                                    <span className="text-sm" style={{color: darkMode ? "white" : "black"}}>
+                                                        Proficiency
+                                                    </span>
+                                                    <span
+                                                    className="text-sm"
+                                                    style={{
+                                                        background:
+                                                        "linear-gradient(to right, #3b82f6, #06b6f4)",
+                                                        WebkitBackgroundClip: "text",
+                                                        backgroundClip: "text",
+                                                        color: "transparent",
+                                                    }}>
+                                                        {skill.level}%
+                                                    </span>
+                                                </div>
+
+                                                {/* Progress Bar */}
+                                                <div className={`w-full h-2 rounded-full overflow-hidden ${
+                                                    darkMode ? "bg-gray-700" : "bg-gray-200"
+                                                    }`}>
+                                                    <div className="h-full rounded-full transition-all duration-500"
+                                                    style={{
+                                                        width: `${skill.level}%`,
+                                                        backgroundColor: darkMode ? "#0ea5e9" : "#06b6d4",
+                                                    }} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        ))}
+                                        </div>
+                    
+                    {/* End of Programming Skills */}
                     </div>
 
+                    
+
+                    
 
                     {/* =====================================================
                         Statistical Skills
