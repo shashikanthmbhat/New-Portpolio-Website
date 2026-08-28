@@ -297,7 +297,7 @@ const Header = ({ darkMode }) => {
 
                             <div
                                 className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4"
-                                data-aos="fade-up"
+                                data-aos="fade-left"
                                 data-aos-delay="700"
                             >
 
