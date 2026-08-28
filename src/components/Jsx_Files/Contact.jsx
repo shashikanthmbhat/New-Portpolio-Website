@@ -1,10 +1,47 @@
+//Webform courtesy : Web3Forms(https://web3forms.com/)
+import { useState } from 'react';
 import {
     headerCt,
     contactInfo,
 } from "../Js_Files/Contactdata";
 
-
 const Contact = ({ darkMode }) => {
+    const [result, setResult] = useState("");
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+
+        setResult("Sending...");
+
+        const formData = new FormData(event.target);
+
+        formData.append(
+            "access_key",
+            "d16f95c5-4766-485d-85c4-022cecb9cb1d"
+        );
+
+        try {
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData,
+                }
+            );
+
+            const data = await response.json();
+
+            if (data.success) {
+                setResult("Message sent successfully!");
+                event.target.reset();
+            } else {
+                setResult(data.message || "Something went wrong.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            setResult("Unable to send message. Please try again.");
+        }
+    };
 
     return (
         <section
@@ -19,13 +56,26 @@ const Contact = ({ darkMode }) => {
                     data-aos="fade-up"
                 >
                     {/* Get In Touch text */}
-                    <h2 className={darkMode ? "style1-dark" : "style1-light"}>
+                    <h2
+                        className={
+                            darkMode
+                                ? "style1-dark"
+                                : "style1-light"
+                        }
+                    >
                         {headerCt.title1}
-                        <span className='style2'>
+                        <span className="style2">
                             {headerCt.title2}
                         </span>
                     </h2>
-                    <p className={darkMode ? "style-Disc-dark" : "style-Disc-light"}>
+
+                    <p
+                        className={
+                            darkMode
+                                ? "style-Disc-dark"
+                                : "style-Disc-light"
+                        }
+                    >
                         {headerCt.description}
                     </p>
                 </div>
@@ -37,11 +87,7 @@ const Contact = ({ darkMode }) => {
                     <div
                         data-aos="fade-right"
                         className={`col-span-2 rounded-2xl border p-5 ${
-                            darkMode
-                                ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                        }`}
-                    >
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}>
                         <h3
                             className="text-2xl font-bold mb-6"
                             style={{
@@ -55,7 +101,6 @@ const Contact = ({ darkMode }) => {
                         <div className="flex flex-col space-y-6 indent-4 gap-1">
 
                             {contactInfo.map((info) => {
-
                                 const IconComponent = info.icon;
 
                                 return (
@@ -142,26 +187,42 @@ const Contact = ({ darkMode }) => {
                     </div>
 
                     {/* Contact Form */}
+                    {/* Webform courtesy : Web3Forms(https://web3forms.com/) */}
                     <div
                         data-aos="fade-left"
                         className="col-span-3"
                     >
                         <form
+                            onSubmit={onSubmit}
                             className={`rounded-xl p-4 sm:p-5 md:p-6 lg:p-8 border shadow-lg order-1 lg:order-2 ${
-                                darkMode
-                                    ? "bg-[#111a3e] border-transparent hover:border-blue-500/50 hover:shadow-[0_0_20px_-5px_rgba(6,162,194,0.2)]"
-                                    : "bg-[#c0e6fd] border-transparent hover:border-sky-800/50 hover:shadow-[0_0_20px_-5px_rgba(82,82,91,0.8)]"
-                            }`}
+                            darkMode ? 'style-bg-dark' : 'style-bg-light' }`}
                             data-aos="fade-left"
                         >
+                            {/* Hidden fields for email */}
+                            <input
+                                type="hidden"
+                                name="subject"
+                                value="A new Person/Organization wants to connect with you"
+                            />
 
+                            <input
+                                type="hidden"
+                                name="from_name"
+                                value="Portfolio Contact Form"
+                            />
+
+                            <input
+                                type="hidden"
+                                name="botcheck"
+                                value=""
+                            />
                             {/* First Name & Last Name */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-
                                 {/* First Name */}
                                 <input
                                     type="text"
-                                    placeholder="first Name"
+                                    name="first_name"
+                                    placeholder="First Name"
                                     className={`w-full px-3 border-2 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base transition-all mb-3 sm:mb-4 focus:outline-none ${
                                         darkMode
                                             ? "text-white border-blue-500 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20"
@@ -173,6 +234,7 @@ const Contact = ({ darkMode }) => {
                                 {/* Last Name */}
                                 <input
                                     type="text"
+                                    name="last_name"
                                     placeholder="Last Name"
                                     className={`w-full px-3 border-2 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base transition-all mb-3 sm:mb-4 focus:outline-none ${
                                         darkMode
@@ -186,7 +248,8 @@ const Contact = ({ darkMode }) => {
 
                             {/* Email */}
                             <input
-                                type="text"
+                                type="email"
+                                name="email"
                                 placeholder="Email"
                                 className={`w-full px-3 border-2 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base transition-all mb-3 sm:mb-4 focus:outline-none ${
                                     darkMode
@@ -199,6 +262,7 @@ const Contact = ({ darkMode }) => {
                             {/* Phone Number */}
                             <input
                                 type="tel"
+                                name="phone"
                                 placeholder="Phone Number"
                                 className={`w-full px-3 border-2 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base transition-all mb-3 sm:mb-4 focus:outline-none ${
                                     darkMode
@@ -210,6 +274,7 @@ const Contact = ({ darkMode }) => {
 
                             {/* Message */}
                             <textarea
+                                name="message"
                                 rows="10"
                                 placeholder="Your Message"
                                 className={`w-full px-3 border-2 sm:px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base transition-all mb-3 sm:mb-4 focus:outline-none ${
@@ -233,10 +298,25 @@ const Contact = ({ darkMode }) => {
                                 Send Message
                             </button>
 
+                            {/* Submission Result */}
+                            <p
+                                className={`mt-3 text-center font-medium ${
+                                    result.includes("successfully")
+                                        ? "text-green-500"
+                                        : result.includes("Sending")
+                                        ? "text-blue-500"
+                                        : "text-red-500"
+                                }`}
+                            >
+                                {result}
+                            </p>
+
                         </form>
+
                     </div>
 
                 </div>
+
             </div>
         </section>
     );
