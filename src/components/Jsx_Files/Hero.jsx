@@ -1,6 +1,7 @@
 // Header.jsx
 
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
     assets,
     socialIcons,
@@ -9,7 +10,7 @@ import {
     headerHero,
 } from "../Js_Files/Herodata";
 
-import { motion } from "framer-motion";
+
 
 
 const Header = ({ darkMode }) => {
