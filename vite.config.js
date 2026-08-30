@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/New-Portpolio-Website/', // 👈 ADD THIS LINE
+  base: "/New-Portpolio-Website/",
 })
