@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/New-Portpolio-Website/', // Must match your exact repo name with slashes
-  // ... rest of your config
+  plugins: [react(), tailwindcss()],
+  base: '/New-Portpolio-Website/', // 👈 ADD THIS LINE
 })
