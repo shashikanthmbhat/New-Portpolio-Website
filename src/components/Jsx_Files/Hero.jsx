@@ -119,7 +119,7 @@ const Header = ({ darkMode }) => {
                         LEFT CONTENT
                     ============================ */}
 
-                    <div className="lg:w-1/2 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0">
+                    <div className="lg:w-3/5 w-full flex flex-col items-center lg:items-start text-center lg:text-left mb-12 lg:mb-0">
 
                         {/* 1ST LINE */}
 
@@ -235,7 +235,7 @@ const Header = ({ darkMode }) => {
                         ============================ */}
 
                         <p
-                            className={`mb-6 sm:mb-4 px-2 leading-relaxed max-w-md sm:max-w-lg text-justify ${theme.textSecondary}`}
+                            className={`mb-6 sm:mb-4 px-3 leading-relaxed max-w-[70%] sm:max-w-lg text-justify ${theme.textSecondary}`}
                             data-aos="fade-up"
                             data-aos-delay="600"
                         >
